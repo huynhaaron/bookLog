@@ -1,4 +1,4 @@
-## Sample State
+
 {
   session:
     {
