@@ -28,6 +28,8 @@
 
 - `GET /api/bookshelves`
   + get all the bookshelf for current user
+- `GET /api/bookshelves/books`
+  + get all books for the selected bookshelf of the current user
 - `POST /api/bookshelves`
   + create a bookshelf
 - `DELETE /api/bookshelves/:id`

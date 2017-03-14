@@ -49,16 +49,20 @@
       1:
         {
           id: 1,
+          title: "Great book for all ages",
           body: "Harry Potter is the best",
           userId: 1,
-          bookId: 1
+          bookId: 1,
+          ratings: 5
         },
       2:
         {
           id: 2,
+          title: "Can't put this book down!",
           body: "Da Vinci Code is great",
           userId: 1,
-          bookId: 2
+          bookId: 2,
+          ratings: 4
         }
     },
 }

@@ -41,23 +41,38 @@ sufficient CSS styling:
 ### Phase 1: Backend setup and Front End User Authentication (2 days)
 
 **Objective:** Functioning rails project with front-end Authentication
+- Adequate Styling
+- Smooth, bug-free navigation
+- Adequate and appropriate seeds to demonstrate the feature
 
-### Phase 2: Bookshelves, API, and components (2 days)
+### Phase 2: Books Model, API, and components (2 days)
+
+**Objective:** Book belong to Bookshelves that can be created, read, edited and destroyed through the API.
+- Adequate Styling
+- Smooth, bug-free navigation
+- Adequate and appropriate seeds to demonstrate the feature
+
+### Phase 3: Bookshelves, API, and components (2 days)
 
 **Objective:** Bookshelves can be created, read, edited and destroyed through
 the API.
-
-### Phase 3: Books Model, API, and components (2 days)
-
-**Objective:** Book belong to Bookshelves that can be created, read, edited and destroyed through the API.
+- Adequate Styling
+- Smooth, bug-free navigation
+- Adequate and appropriate seeds to demonstrate the feature
 
 ### Phase 4: Read Status (2 days)
 
 **Objective:** Books can have a read status that can be created, read, edited and destroyed through the API.
+- Adequate Styling
+- Smooth, bug-free navigation
+- Adequate and appropriate seeds to demonstrate the feature
 
 ### Phase 5: Reviews (2 days)
 
 **Objective:** Books can have reviews that can be created, read, updated, and destroyed through the API.
+- Adequate Styling
+- Smooth, bug-free navigation
+- Adequate and appropriate seeds to demonstrate the feature
 
 
 ### Bonus Features (TBD)
