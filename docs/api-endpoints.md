@@ -28,7 +28,7 @@
 
 - `GET /api/bookshelves`
   + get all the bookshelf for current user
-- `GET /api/bookshelves/books`
+- `GET /api/bookshelves/:id`
   + get all books for the selected bookshelf of the current user
 - `POST /api/bookshelves`
   + create a bookshelf
