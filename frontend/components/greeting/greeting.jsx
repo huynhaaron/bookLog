@@ -11,12 +11,14 @@ class Greeting extends React.Component {
   render() {
     if (this.props.currentUser) {
       return (
-        <div>
-          <img src={"http://res.cloudinary.com/booklog/image/upload/v1489615791/open-book32_hdbp4s.png"} alt="Logo" />
-          <p className="main-logo-text">book<b>Log</b></p>
+        <div className="login-form">
+          <div className="logo">
+            <img src={"http://res.cloudinary.com/booklog/image/upload/v1489615791/open-book32_hdbp4s.png"} alt="Logo" />
+            <p className="main-logo-text">book<b>Log</b></p>
+          </div>
           <div className="login-form-right">
             <h3>Logged in as {this.props.currentUser.username}</h3>
-            <button onClick={ this.props.logout }>Logout</button>
+            <button className="login-button" onClick={ this.props.logout }>Logout</button>
           </div>
         </div>
       )
