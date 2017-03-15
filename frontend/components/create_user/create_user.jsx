@@ -44,25 +44,28 @@ class CreateUser extends React.Component {
 
 	render() {
 		return (
-			<div >
+			<div id="create-background" className="create-user-container">
 				<form onSubmit={this.handleSubmit}>
-					<h4>Not a user? Sign up now!</h4>
-					{this.renderErrors()}
-					<div>
+					<div className="create-user-form">
+						<h4>Not a user? Sign up now!</h4>
+						{this.renderErrors()}
 							<input type="text"
+								className="form-input"
 								value={this.state.username}
 								onChange={this.update("username")}
                 placeholder="Username"/>
 						<br/>
 							<input type="password"
+								className="form-input"
 								value={this.state.password}
 								onChange={this.update("password")}
                 placeholder="Password"/>
 						<br/>
-						<input type="submit" value="Submit" />
+						<input className="login-button" type="submit" value="Join Now" />
 					</div>
 				</form>
 			</div>
+
 		);
 	}
 

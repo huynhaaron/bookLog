@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: booklog
+  api_key: '367122831138452'
+  api_secret: axNPj5fSl9ARlcYjLqWQeFurEwQ
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: booklog
+  api_key: '367122831138452'
+  api_secret: axNPj5fSl9ARlcYjLqWQeFurEwQ
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: booklog
+  api_key: '367122831138452'
+  api_secret: axNPj5fSl9ARlcYjLqWQeFurEwQ
+  enhance_image_tag: true
+  static_image_support: false
