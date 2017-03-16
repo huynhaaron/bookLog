@@ -24,7 +24,6 @@ class CreateUser extends React.Component {
 
 	handleSubmit(e) {
 		e.preventDefault();
-		debugger;
 		this.props.clearErrors();
 		const user = this.state;
 		this.props.signup(user);

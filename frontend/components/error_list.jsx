@@ -2,12 +2,14 @@ import React from 'react';
 
 
 const ErrorList = ({ errors }) => {
+  console.log(errors);
   if (errors.length === 0) return null;
-  const errorItems = errors.map(error => <li key={ error }>{ error }</li>)
+
+  const errorItems = errors.map((error, idx) => <li key={ idx }>{ error }</li>);
 
   return (
-    <div className="alert">
-      <ul className="error-list">
+    <div >
+      <ul>
         { errorItems }
       </ul>
     </div>
