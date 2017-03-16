@@ -26,7 +26,7 @@ class CreateUser extends React.Component {
 		e.preventDefault();
 		this.props.clearErrors();
 		const user = this.state;
-		this.props.processForm(user);
+		this.props.signup(user);
 	}
 
 	render() {

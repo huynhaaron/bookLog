@@ -9,9 +9,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = (dispatch, { location }) => {
-  const processForm = login;
   return {
-    processForm: user => dispatch(processForm(user)),
+    login: user => dispatch(login(user)),
     clearErrors: () => dispatch(clearErrors())
   };
 };

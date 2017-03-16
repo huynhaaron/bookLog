@@ -15,12 +15,16 @@ span, article, footer, time, small {
   vertical-align: inherit;
   box-sizing: inherit;
   background: transparent;
+  background-color: transparent;
+  font-family: 'lato', sans-serif;
 }
 
 ul {
   list-style: none;
 }
-
+body {
+  background-color: #DFDAC7;
+}
 img {
   display: block;
   width: 100%;
@@ -43,10 +47,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-body {
-  background-color: #DFDAC7;
-  font-family: 'lato', sans-serif;
-}
+
 
 /* Clearfix */
 
