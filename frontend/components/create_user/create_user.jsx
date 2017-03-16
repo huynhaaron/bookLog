@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router';
 class CreateUser extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {user: { username: "", password: ""}, showErrors: false};
+		this.state = { username: "", password: ""};
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
@@ -19,45 +19,32 @@ class CreateUser extends React.Component {
 	}
 
 	update(field) {
-		return e => this.setState({user: {[field]: e.currentTarget.value}});
+		return e => this.setState({[field]: e.currentTarget.value});
 	}
 
 	handleSubmit(e) {
 		e.preventDefault();
-		const user = this.state.user;
-		this.setState({showErrors: true});
+		this.props.clearErrors();
+		const user = this.state;
 		this.props.processForm(user);
 	}
 
-	renderErrors() {
-		if (this.state.showErrors) {
-			return(
-				<ul>
-					{this.props.errors.map((error, i) => (
-						<li key={`error-${i}`}>
-							{error}
-						</li>
-					))}
-				</ul>
-			);
-		}
-	}
-
 	render() {
+
 		return (
 			<div id="create-background" className="create-user-container">
 				<form onSubmit={this.handleSubmit}>
 					<div className="create-user-form">
 						<p>Not a user? Sign up now!</p>
-						{this.renderErrors()}
+						{/* { this.state.showErrors ? <ErrorList errors={this.props.errors}/> : "" } */}
 							<input type="text"
-								className="form-input"
+								className="create-user-input"
 								value={this.state.username}
 								onChange={this.update("username")}
                 placeholder="Username"/>
 						<br/>
 							<input type="password"
-								className="form-input"
+								className="create-user-input"
 								value={this.state.password}
 								onChange={this.update("password")}
                 placeholder="Password"/>

@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router';
 class SessionForm extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {user: { username: "", password: ""}, showErrors: false};
+		this.state = { username: "", password: ""};
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
@@ -19,29 +19,17 @@ class SessionForm extends React.Component {
 	}
 
 	update(field) {
-		return e => this.setState({user: {[field]: e.currentTarget.value }});
+		return e => this.setState({[field]: e.currentTarget.value});
 	}
 
 	handleSubmit(e) {
 		e.preventDefault();
-		const user = this.state.user;
-		this.setState({showErrors: true});
+		this.props.clearErrors();
+		const user = this.state;
 		this.props.processForm(user);
 	}
 
-	renderErrors() {
-		if (this.state.showErrors) {
-			return(
-				<ul>
-					{this.props.errors.map((error, i) => (
-						<li key={`error-${i}`}>
-							{error}
-						</li>
-					))}
-				</ul>
-			);
-		}
-	}
+
 
 	render() {
 		return (
@@ -60,10 +48,9 @@ class SessionForm extends React.Component {
 								onChange={this.update("password")}
                 placeholder="Password"/>
 						<br/>
-						<input className="login-button" type="submit" value="Login" />
+							<input className="login-button" type="submit" value="Login" />
 					</div>
 				</form>
-				{this.renderErrors()}
 			</div>
 		);
 	}
