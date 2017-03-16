@@ -22,7 +22,7 @@ class Nav extends React.Component {
       return (
         <div className="login-form">
           <div className="logo">
-            <img src={"http://res.cloudinary.com/booklog/image/upload/v1489615791/open-book32_hdbp4s.png"} alt="Logo" />
+            <img src={"https://res.cloudinary.com/booklog/image/upload/v1489615791/open-book32_hdbp4s.png"} alt="Logo" />
             <p className="main-logo-text"><strong>BookLog</strong></p>
           </div>
           <div className="login-form-right">
@@ -36,7 +36,7 @@ class Nav extends React.Component {
         <div>
           <div className="login-form">
             <div className="logo">
-              <img src={"http://res.cloudinary.com/booklog/image/upload/v1489615791/open-book32_hdbp4s.png"} alt="Logo" />
+              <img src={"https://res.cloudinary.com/booklog/image/upload/v1489615791/open-book32_hdbp4s.png"} alt="Logo" />
               <h1 className="login-form-left">Book<strong>Log</strong></h1>
             </div>
             <SessionFormContainer />
