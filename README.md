@@ -4,7 +4,7 @@
 
 [Trello link][trello]
 
-[heroku]: http://www.herokuapp.com
+[heroku]: https://stark-ridge-25532.herokuapp.com/
 [trello]: https://trello.com/b/Pkljgmxa/booklog
 
 ## Minimum Viable Product
