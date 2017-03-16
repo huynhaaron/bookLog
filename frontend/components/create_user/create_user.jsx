@@ -24,6 +24,7 @@ class CreateUser extends React.Component {
 
 	handleSubmit(e) {
 		e.preventDefault();
+		debugger;
 		this.props.clearErrors();
 		const user = this.state;
 		this.props.signup(user);
@@ -32,7 +33,7 @@ class CreateUser extends React.Component {
 	render() {
 
 		return (
-			<div id="create-background" className="create-user-container">
+			<div className="create-user-container">
 				<form onSubmit={this.handleSubmit}>
 					<div className="create-user-form">
 						<p>Not a user? Sign up now!</p>

@@ -9,5 +9,6 @@
 
 User.destroy_all
 
-test123 = User.create!(username: "test123", password: "password")
-guest = User.create!(username: "guest", password: "password")
+User.create!(username: "test123", password: "password")
+User.create!(username: "guest", password: "password")
+User.create!(username: "demo", password: "password")
