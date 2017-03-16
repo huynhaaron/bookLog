@@ -14,7 +14,7 @@ class Greeting extends React.Component {
         <div className="login-form">
           <div className="logo">
             <img src={"http://res.cloudinary.com/booklog/image/upload/v1489615791/open-book32_hdbp4s.png"} alt="Logo" />
-            <p className="main-logo-text">book<b>Log</b></p>
+            <p className="main-logo-text">bookLog</p>
           </div>
           <div className="login-form-right">
             <h3>Logged in as {this.props.currentUser.username}</h3>

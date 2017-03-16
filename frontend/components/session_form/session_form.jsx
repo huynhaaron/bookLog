@@ -46,7 +46,6 @@ class SessionForm extends React.Component {
 		return (
 			<div>
 				<form onSubmit={this.handleSubmit}>
-					{this.renderErrors()}
 					<div className="login-form-right" >
 							<input type="text"
 								className="form-input"
@@ -63,6 +62,7 @@ class SessionForm extends React.Component {
 						<input className="login-button" type="submit" value="Login" />
 					</div>
 				</form>
+				{this.renderErrors()}
 			</div>
 		);
 	}

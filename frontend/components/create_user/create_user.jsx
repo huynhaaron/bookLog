@@ -47,7 +47,7 @@ class CreateUser extends React.Component {
 			<div id="create-background" className="create-user-container">
 				<form onSubmit={this.handleSubmit}>
 					<div className="create-user-form">
-						<h4>Not a user? Sign up now!</h4>
+						<p>Not a user? Sign up now!</p>
 						{this.renderErrors()}
 							<input type="text"
 								className="form-input"
@@ -61,7 +61,7 @@ class CreateUser extends React.Component {
 								onChange={this.update("password")}
                 placeholder="Password"/>
 						<br/>
-						<input className="login-button" type="submit" value="Join Now" />
+						<input className="create-button" type="submit" value="Join Now" />
 					</div>
 				</form>
 			</div>
