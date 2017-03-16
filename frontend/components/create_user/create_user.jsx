@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router';
 class CreateUser extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { username: "", password: "" };
+		this.state = {user: { username: "", password: ""}, showErrors: false};
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
@@ -19,27 +19,28 @@ class CreateUser extends React.Component {
 	}
 
 	update(field) {
-		return e => this.setState({
-			[field]: e.currentTarget.value
-		});
+		return e => this.setState({user: {[field]: e.currentTarget.value}});
 	}
 
 	handleSubmit(e) {
 		e.preventDefault();
-		const user = this.state;
+		const user = this.state.user;
+		this.setState({showErrors: true});
 		this.props.processForm(user);
 	}
 
 	renderErrors() {
-		return(
-			<ul>
-				{this.props.errors.map((error, i) => (
-					<li key={`error-${i}`}>
-						{error}
-					</li>
-				))}
-			</ul>
-		);
+		if (this.state.showErrors) {
+			return(
+				<ul>
+					{this.props.errors.map((error, i) => (
+						<li key={`error-${i}`}>
+							{error}
+						</li>
+					))}
+				</ul>
+			);
+		}
 	}
 
 	render() {
