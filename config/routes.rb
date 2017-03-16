@@ -4,11 +4,12 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     resource :session, only: [:create, :destroy]
-    resource :users, only: [:create]
+    resources :users, only: [:create]
     # resource :books, only: [:index, :show]
-    controller :books do
-      get 'books' => :index
-      get 'books/:id' => :show
-    end
+    # controller :books do
+    #   get 'books' => :index
+    #   get 'books/:id' => :show
+    # end
+    resources :books, only: [:index, :show]
   end
 end
