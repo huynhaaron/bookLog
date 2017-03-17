@@ -8,6 +8,7 @@ const mapStateToProps = state => ({
   errors: state.session.errors
 });
 
+
 const mapDispatchToProps = (dispatch) => ({
   logout: () => dispatch(logout())
 });

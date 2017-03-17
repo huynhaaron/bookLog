@@ -36,7 +36,6 @@ class CreateUser extends React.Component {
 				<form onSubmit={this.handleSubmit}>
 					<div className="create-user-form">
 						<p>Not a user? Sign up now!</p>
-						{/* { this.state.showErrors ? <ErrorList errors={this.props.errors}/> : "" } */}
 							<input type="text"
 								className="create-user-input"
 								value={this.state.username}
