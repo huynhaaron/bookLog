@@ -6,6 +6,7 @@ class CreateUser extends React.Component {
 		super(props);
 		this.state = { username: "", password: ""};
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.demoSignIn = this.demoSignIn.bind(this);
 	}
 
 	componentDidUpdate() {
@@ -29,6 +30,15 @@ class CreateUser extends React.Component {
 		this.props.signup(user);
 	}
 
+	demoSignIn() {
+		this.props.clearErrors();
+		const user = {
+			username: "demo",
+			password: "password"
+		};
+		this.props.login(user);
+	}
+
 	render() {
 
 		return (
@@ -49,6 +59,7 @@ class CreateUser extends React.Component {
                 placeholder="Password"/>
 						<br/>
 						<input className="create-button" type="submit" value="Join Now" />
+						<button className="create-button" onClick={this.demoSignIn} >Demo</button>
 					</div>
 				</form>
 			</div>

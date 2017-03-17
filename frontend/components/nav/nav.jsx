@@ -24,11 +24,20 @@ class Nav extends React.Component {
         <div>
           <div className="login-form">
             <div className="logo">
-              <img src={"https://res.cloudinary.com/booklog/image/upload/v1489615791/open-book32_hdbp4s.png"} alt="Logo" />
-              <p className="main-logo-text"><strong>BookLog</strong></p>
+              <Link to={`/`}>
+                <img src={"https://res.cloudinary.com/booklog/image/upload/v1489615791/open-book32_hdbp4s.png"} alt="Logo" />
+              </Link>
+              <Link to={`/`}>
+                <p className="main-logo-text"><strong>BookLog</strong></p>
+              </Link>
             </div>
             <div className="login-form-right">
-              <h3>Logged in as {this.props.currentUser.username}</h3>
+              <h2>Hi {this.props.currentUser.username}</h2>
+              <div className="home-button">
+                <Link to={`/`}>
+                <img src="https://res.cloudinary.com/booklog/image/upload/v1489782963/home_deekjt.png" alt="Home"/>
+                </Link>
+              </div>
               <button className="login-button" onClick={ this.props.logout }>Logout</button>
             </div>
           </div>

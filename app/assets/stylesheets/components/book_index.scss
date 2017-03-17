@@ -1,3 +1,20 @@
+.book_index_show_all {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.book_index_cotainer {
+  display: flex;
+  flex-direction: row;
+}
+
 .book_index_cover_image {
-  max-width: 125px;
+  position: relative;
+  float: left;
+  margin-left: 30px;
+  margin-top: 20px;
+  object-fit: contain;
+  width: 120px;
+  height: 192px;
 }

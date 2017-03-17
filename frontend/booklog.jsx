@@ -5,14 +5,15 @@ import configureStore from './store/store';
 import Root from './components/root';
 
 import { signup, login, logout } from './actions/session_actions';
-import { requestAllBooks } from './actions/book_actions';
+import { requestAllBooks, requestBook } from './actions/book_actions';
 import { selectAllBooks } from './reducers/selectors';
 
 window.signup = signup;
 window.login = login;
 window.logout = logout;
 window.requestAllBooks = requestAllBooks;
-window.selectAllBooks = selectAllBooks
+window.selectAllBooks = selectAllBooks;
+window.requestBook = requestBook;
 
 
 document.addEventListener('DOMContentLoaded', () => {

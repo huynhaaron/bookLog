@@ -29,8 +29,6 @@ class SessionForm extends React.Component {
 		this.props.login(user);
 	}
 
-
-
 	render() {
 		return (
 			<div>

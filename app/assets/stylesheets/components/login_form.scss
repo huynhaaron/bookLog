@@ -23,6 +23,7 @@
 .login-form-right {
 	display: flex;
 	align-items: center;
+	margin: 10px;
 }
 
 .login-form {
@@ -55,23 +56,15 @@
 	color : #ffffff;
 	padding : 4px 17px;
 	background-color : #101112;
-	margin-right: 20px;
+	margin-right: 15px;
+	margin-left: 15px;
 }
 
 .login-button:hover {
 	background-color: #683F19;
 }
 
-.create-button {
-	border : solid 0px #000000;
-	border-radius : 5px;
-	font-size : 20px;
-	color : #ffffff;
-	padding : 4px 17px;
-	background-color : #fcba20;
-	margin-right: 20px;
-}
 
-.create-button:hover {
-	background-color: #ffd56d;
+.home-button {
+	margin-left: 15px;
 }
