@@ -1,11 +1,11 @@
 import * as BookAPIUtil from '../util/book_api_util';
 
-export const RECEIVE_BOOKS = 'RECEIVE_BOOKS';
+export const RECEIVE_ALL_BOOKS = 'RECEIVE_ALL_BOOKS';
 export const RECEIVE_BOOK = 'RECEIVE_BOOK';
 
 
-export const requestBooks = () => dispatch => (
-  BookAPIUtil.fetchAllBooks().then(books => dispatch(receiveBooks(books)))
+export const requestAllBooks = () => dispatch => (
+  BookAPIUtil.fetchAllBooks().then(books => dispatch(receiveAllBooks(books)))
 )
 
 export const requestBook = id => dispatch => (
@@ -13,9 +13,9 @@ export const requestBook = id => dispatch => (
 );
 
 
-export const receiveBooks = books => {
+export const receiveAllBooks = books => {
   return {
-    type: RECEIVE_BOOKS,
+    type: RECEIVE_ALL_BOOKS,
     books
   };
 };

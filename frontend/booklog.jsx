@@ -5,12 +5,14 @@ import configureStore from './store/store';
 import Root from './components/root';
 
 import { signup, login, logout } from './actions/session_actions';
-import { requestBooks } from './actions/book_actions';
+import { requestAllBooks } from './actions/book_actions';
+import { selectAllBooks } from './reducers/selectors';
 
 window.signup = signup;
 window.login = login;
 window.logout = logout;
-window.requestBooks = requestBooks;
+window.requestAllBooks = requestAllBooks;
+window.selectAllBooks = selectAllBooks
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -26,4 +28,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={ store }/>, root);
+  // store.dispatch(requestAllBooks());
 });

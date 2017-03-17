@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import SessionFormContainer from '../session_form/session_form_container';
 import CreateUserContainer from '../create_user/create_user_container';
 import ErrorList from '../error_list';
+import BooksIndex from '../books/books_index';
 
 class Nav extends React.Component {
   constructor(props) {
@@ -20,16 +21,18 @@ class Nav extends React.Component {
   render() {
     if (this.props.currentUser) {
       return (
-        <div className="login-form">
-          <div className="logo">
-            <img src={"https://res.cloudinary.com/booklog/image/upload/v1489615791/open-book32_hdbp4s.png"} alt="Logo" />
-            <p className="main-logo-text"><strong>BookLog</strong></p>
+        <div>
+          <div className="login-form">
+            <div className="logo">
+              <img src={"https://res.cloudinary.com/booklog/image/upload/v1489615791/open-book32_hdbp4s.png"} alt="Logo" />
+              <p className="main-logo-text"><strong>BookLog</strong></p>
+            </div>
+            <div className="login-form-right">
+              <h3>Logged in as {this.props.currentUser.username}</h3>
+              <button className="login-button" onClick={ this.props.logout }>Logout</button>
+            </div>
           </div>
-          <div className="login-form-right">
-            <h3>Logged in as {this.props.currentUser.username}</h3>
-            <button className="login-button" onClick={ this.props.logout }>Logout</button>
-          </div>
-        </div>
+      </div>
       )
     } else {
       return (

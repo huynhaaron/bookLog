@@ -7,16 +7,16 @@ class SessionForm extends React.Component {
 		this.state = { username: "", password: ""};
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
-	//
-	// componentDidUpdate() {
-	// 	this.redirectIfLoggedIn();
-	// }
-	//
-	// redirectIfLoggedIn() {
-	// 	if (this.props.loggedIn) {
-	// 		this.props.router.push("/");
-	// 	}
-	// }
+
+	componentDidUpdate() {
+		this.redirectIfLoggedIn()
+	}
+
+	redirectIfLoggedIn() {
+		if (this.props.loggedIn) {
+			this.props.router.push("/");
+		}
+	}
 
 	update(field) {
 		return e => this.setState({[field]: e.currentTarget.value});
