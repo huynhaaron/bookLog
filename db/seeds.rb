@@ -107,3 +107,82 @@ Book.create!(title: "Memoirs of a Geisha",
              publisher: "Vintage Books USA",
              isbn: "1400096898",
              language: "en")
+
+Book.create!(title: "The Great Gatsby",
+             author: "F. Scott Fitzgerald",
+             description:  "THE GREAT GATSBY, F. Scott Fitzgerald’s third book, stands as the supreme achievement of his career. This exemplary novel of the Jazz Age has been acclaimed by generations of readers. The story of the fabulously wealthy Jay Gatsby and his love for the beautiful Daisy Buchanan, of lavish parties on Long Island at a time when The New York Times noted “gin was the national drink and sex the national obsession,” it is an exquisitely crafted tale of America in the 1920s.
+The Great Gatsby is one of the great classics of twentieth-century literature. ",
+             cover_url: "https://images.gr-assets.com/books/1480580717l/4671.jpg",
+             avg_rating: 3.88,
+             pages: 180,
+             publish_date: "2004",
+             publisher: "Scribner",
+             isbn: "0743273567",
+             language: "en")
+
+Book.create!(title: "Lord of the Flies",
+             author: "William Golding",
+             description: "When a plane crashes on a remote island, a small group of schoolboys are the sole survivors. From the prophetic Simon and virtuous Ralph to the lovable Piggy and brutish Jack, each of the boys attempts to establish control as the reality - and brutal savagery - of their situation sets in.
+
+The boys' struggle to find a way of existing in a community with no fixed boundaries invites readers to evaluate the concepts involved in social and political constructs and moral frameworks. Ideas of community, leadership, and the rule of law are called into question as the reader has to consider who has a right to power, why, and what the consequences of the acquisition of power may be. Often compared to Catcher in the Rye, Lord of the Flies also represents a coming-of-age story of innocence lost.",
+             cover_url: "https://images.gr-assets.com/books/1340919381l/84943.jpg",
+             avg_rating: 3.64,
+             pages: 202,
+             publish_date: "2003",
+             publisher: "Perigree",
+             isbn: "0399501487",
+             language: "en")
+
+Book.create!(title: "To Kill a Mockingbird",
+             author: "Harper Lee",
+             description: "The unforgettable novel of a childhood in a sleepy Southern town and the crisis of conscience that rocked it, To Kill A Mockingbird became both an instant bestseller and a critical success when it was first published in 1960. It went on to win the Pulitzer Prize in 1961 and was later made into an Academy Award-winning film, also a classic.
+
+Compassionate, dramatic, and deeply moving, To Kill A Mockingbird takes readers to the roots of human behavior - to innocence and experience, kindness and cruelty, love and hatred, humor and pathos.",
+             cover_url: "https://images.gr-assets.com/books/1339392178l/37449.jpg",
+             avg_rating: 4.25,
+             pages: 376,
+             publish_date: "1982",
+             publisher: "Grand Central Publishing (Hachette Book Group)",
+             isbn: "1439550417",
+             language: "en")
+
+Book.create!(title: "Brave New World",
+             author: "Aldous Huxley",
+             description: "Aldous Huxley's profoundly important classic of world literature, Brave New World is a searching vision of an unequal, technologically-advanced future where humans are genetically bred, socially indoctrinated, and pharmaceutically anesthetized to passively uphold an authoritarian ruling order--all at the cost of our freedom, full humanity, and perhaps also our souls. “A genius [who] who spent his life decrying the onward march of the Machine” (The New Yorker), Huxley was a man of incomparable talents: equally an artist, a spiritual seeker, and one of history’s keenest observers of human nature and civilization. Brave New World, his masterpiece, has enthralled and terrified millions of readers, and retains its urgent relevance to this day as both a warning to be heeded as we head into tomorrow and as thought-provoking, satisfying work of literature. Written in the shadow of the rise of fascism during the 1930s, Brave New World likewise speaks to a 21st-century world dominated by mass-entertainment, technology, medicine and pharmaceuticals, the arts of persuasion, and the hidden influence of elites. ",
+             cover_url: "https://images.gr-assets.com/books/1298180450l/5485.jpg",
+             avg_rating: 3.96,
+             pages: 259,
+             publish_date: "2006-10-17",
+             publisher: "Harper Perennial Modern Classics",
+             isbn: "0060850523",
+             language: "en")
+
+Book.create!(title: "Sophie's World",
+             author: "Jostein Gaardner",
+             description: "Sophie finds two questions in her mailbox: 'Who are you?' and 'Where does the world come from?' This is the start of her journey through the history of philosophy, guided by a mysterious mentor. To find the truth, we must understand the questions, but the truth is stranger than Sophie can imagine.",
+             cover_url: "https://images.gr-assets.com/books/1391118333l/25406.jpg",
+             avg_rating: 3.87,
+             pages: 518,
+             publish_date: "2007-03-20",
+             publisher: "Farrar, Straus and Giroux",
+             isbn: "0374530718",
+             language: "en")
+
+Book.create!(title: "Atlas Shrugged",
+             author: "Ayn Rand",
+             description: "This is the story of a man who said that he would stop the motor of the world and did. Was he a destroyer or the greatest of liberators?
+
+Why did he have to fight his battle, not against his enemies, but against those who needed him most, and his hardest battle against the woman he loved? What is the world’s motor — and the motive power of every man? You will know the answer to these questions when you discover the reason behind the baffling events that play havoc with the lives of the characters in this story.
+
+Tremendous in its scope, this novel presents an astounding panorama of human life — from the productive genius who becomes a worthless playboy — to the great steel industrialist who does not know that he is working for his own destruction — to the philosopher who becomes a pirate — to the composer who gives up his career on the night of his triumph — to the woman who runs a transcontinental railroad — to the lowest track worker in her Terminal tunnels.
+
+You must be prepared, when you read this novel, to check every premise at the root of your convictions.
+
+This is a mystery story, not about the murder — and rebirth — of man’s spirit. It is a philosophical revolution, told in the form of an action thriller of violent events, a ruthlessly brilliant plot structure and an irresistible suspense. Do you say this is impossible? Well, that is the first of your premises to check.",
+             cover_url: "https://images.gr-assets.com/books/1405868167l/662.jpg",
+             avg_rating: 3.68,
+             pages: 1168,
+             publish_date: "1999-08-01",
+             publisher: "Plume",
+             isbn: "0452011876",
+             language: "en")

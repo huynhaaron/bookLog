@@ -10,10 +10,10 @@ class BooksIndex extends Component {
   render() {
     const { books, children } = this.props;
     return (
-      <ul className="book_index_show_all">
+      <div className="book_index_show_all">
         {books.map(book => <BookIndexItem key={book.id} book={book} />)}
         { children }
-      </ul>
+      </div>
     )
   };
 
