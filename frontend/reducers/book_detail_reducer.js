@@ -1,6 +1,6 @@
+import { RECEIVE_BOOK } from '../actions/book_actions';
 import { merge } from 'lodash';
 
-import { RECEIVE_BOOK } from '../actions/book_actions';
 
 const defaultBook = {
   title: "",
