@@ -5,22 +5,24 @@ export const RECEIVE_BOOK = 'RECEIVE_BOOK';
 
 
 export const requestAllBooks = () => dispatch => (
-  BookAPIUtil.fetchAllBooks().then(books => dispatch(receiveAllBooks(books)))
+  BookAPIUtil.fetchAllBooks()
+    .then(books => dispatch(receiveAllBooks(books)))
 )
 
-export const requestBook = id => dispatch => (
-  BookAPIUtil.fetchBook(id).then(book => dispatch(receiveBook(book)))
+export const requestBook = (id) => dispatch => (
+  BookAPIUtil.fetchBook(id)
+    .then(book => dispatch(receiveBook(book)))
 );
 
 
-export const receiveAllBooks = books => {
+export const receiveAllBooks = (books) => {
   return {
     type: RECEIVE_ALL_BOOKS,
     books
   };
 };
 
-export const receiveBook = book => {
+export const receiveBook = (book) => {
   return {
     type: RECEIVE_BOOK,
     book
