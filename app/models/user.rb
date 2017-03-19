@@ -19,6 +19,16 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6, allow_nil: true }
 
   after_initialize :ensure_session_token
+  after_save :create_default_bookshelves
+
+  has_many :bookshelves
+
+  def create_default_bookshelves
+    Bookshelf.create(name: 'all', user_id: self.id)
+    Bookshelf.create(name: 'read', user_id: self.id)
+    Bookshelf.create(name: 'currently-reading', user_id: self.id)
+    Bookshelf.create(name: 'to-read', user_id: self.id)
+  end
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
