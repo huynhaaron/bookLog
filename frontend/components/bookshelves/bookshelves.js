@@ -5,7 +5,7 @@ class Bookshelves extends Component {
   constructor(props) {
     super(props);
     this.state = { name: "",
-                   user_id: currentUser.id,
+                  //  user_id: currentUser.id,
                    editState: false};
     this.handleSubmit = this.handleSubmit.bind(this);
 

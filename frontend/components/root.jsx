@@ -22,7 +22,7 @@ const Root = ({ store }) => {
 
   const requestCollectionOnEnter = () => {
     store.dispatch(requestAllBooks());
-    store.dispatch(requestAllBookshelves());
+    // store.dispatch(requestAllBookshelves());
   };
 
   return (
