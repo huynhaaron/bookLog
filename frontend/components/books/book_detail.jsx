@@ -17,29 +17,35 @@ class BookDetail extends Component {
   }
 
   render() {
-    const { bookDetail, children } = this.props;
+    const { bookDetail, currentUser, children } = this.props;
 
-    return (
-      <section className="book-detail-container">
-        <figure>
-          <img className="book-detail-image" src={bookDetail.cover_url} alt={bookDetail.title} />
-        </figure>
-        <ul>
-          <li className="book-title">
-            {bookDetail.title}
-          </li>
-          <li>{bookDetail.author ? `author:  ${bookDetail.author}` : ""}</li>
-          <li>{bookDetail.pages ? `pages:  ${bookDetail.pages}` : ""}</li>
-          <li>{bookDetail.publisher ? `publisher:  ${bookDetail.publisher}` : ""}</li>
-          <li>{bookDetail.publish_date ? `publish_date:  ${bookDetail.publish_date}` : ""}</li>
-          <li>{bookDetail.avg_rating ? `avg rating:  ${bookDetail.avg_rating}` : ""}</li>
-          <li>{bookDetail.isbn ? `isbn:  ${bookDetail.isbn}` : ""}</li>
-          <li>{bookDetail.language ? `language:  ${bookDetail.language}` : ""}</li>
-          <li>{bookDetail.description ? `description:  ${bookDetail.description}` : ""}</li>
-        </ul>
-        {children}
-      </section>
-    );
+    if (this.props.currentUser) {
+      return (
+          <section className="book-detail-container">
+            <figure>
+              <img className="book-detail-image" src={bookDetail.cover_url} alt={bookDetail.title} />
+            </figure>
+            <ul>
+              <li className="book-title">
+                {bookDetail.title}
+              </li>
+              <li>{bookDetail.author ? `author:  ${bookDetail.author}` : ""}</li>
+              <li>{bookDetail.pages ? `pages:  ${bookDetail.pages}` : ""}</li>
+              <li>{bookDetail.publisher ? `publisher:  ${bookDetail.publisher}` : ""}</li>
+              <li>{bookDetail.publish_date ? `publish_date:  ${bookDetail.publish_date}` : ""}</li>
+              <li>{bookDetail.avg_rating ? `avg rating:  ${bookDetail.avg_rating}` : ""}</li>
+              <li>{bookDetail.isbn ? `isbn:  ${bookDetail.isbn}` : ""}</li>
+              <li>{bookDetail.language ? `language:  ${bookDetail.language}` : ""}</li>
+              <li>{bookDetail.description ? `description:  ${bookDetail.description}` : ""}</li>
+            </ul>
+            {children}
+          </section>
+        );
+      } else {
+        return (
+          <div></div>
+        )
+    }
   }
 
 }

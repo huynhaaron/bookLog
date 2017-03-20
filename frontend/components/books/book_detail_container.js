@@ -2,8 +2,9 @@ import { connect } from 'react-redux';
 import BookDetail from './book_detail';
 import { requestBook } from '../../actions/book_actions';
 
-const mapStateToProps = ({ bookDetail }) => ({
-  bookDetail
+const mapStateToProps = ({ bookDetail, session }) => ({
+  bookDetail,
+  currentUser: session.currentUser,
 });
 
 const mapDispatchToProps = dispatch => ({
