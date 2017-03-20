@@ -20,10 +20,15 @@ export const updateBookshelf = (bookshelf) => dispatch => (
     .then(bookshelf => dispatch(receiveBookshelf(bookshelf)))
 )
 
-export const deleteBookshelf = (bookshelf) => dispatch => (
+export const deleteBookshelf = (bookshelf) => dispatch => {
+  return (
   BookshelfAPIUtil.deleteBookshelf(bookshelf)
-    .then(bookshelf => dispatch(removeBookshelf(bookshelf)))
+    .then(bookshelf => {
+      return dispatch(removeBookshelf(bookshelf));
+    }
+  )
 )
+}
 
 export const receiveAllBookshelves = (bookshelves) => {
   return {

@@ -7,6 +7,7 @@ class Bookshelves extends Component {
     this.state = { name: "",
                    editState: false};
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
 
   }
 
@@ -45,7 +46,7 @@ class Bookshelves extends Component {
       return (
         <span key={idx}>
           <li className="shelf-text" key={idx}> {bookshelf.name}
-          <button key={bookshelf} onClick={this.handleDelete.bind(bookshelf)}>
+          <button key={bookshelf} onClick={this.handleDelete(bookshelf)}>
             <img src="https://res.cloudinary.com/booklog/image/upload/v1490041649/rubbish-bin_lx1eag.png"/>
           </button>
           </li>
@@ -65,10 +66,11 @@ class Bookshelves extends Component {
 
           <br />
           <p><strong>Add a Shelf:</strong></p>
-          <form onSubmit={ this.handleSubmit }>
+          <form name="add-shelf-form" onSubmit={ this.handleSubmit }>
             <input
               className="shelf-text-input"
               type="text"
+              value={this.state.name}
               onChange={this.update("name")}
               />
             <input className="shelf-add-button" type="submit" value="add" />
