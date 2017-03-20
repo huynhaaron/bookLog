@@ -8,9 +8,9 @@ class SessionForm extends React.Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
-	componentDidUpdate() {
-		this.redirectIfLoggedIn()
-	}
+	// componentDidUpdate() {
+	// 	this.redirectIfLoggedIn()
+	// }
 
 	redirectIfLoggedIn() {
 		if (this.props.loggedIn) {

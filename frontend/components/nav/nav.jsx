@@ -3,7 +3,8 @@ import { Link } from 'react-router';
 import SessionFormContainer from '../session_form/session_form_container';
 import CreateUserContainer from '../create_user/create_user_container';
 import ErrorList from '../error_list';
-import BooksIndex from '../books/books_index';
+import BooksIndexContainer from '../books/books_index_container';
+import Home from '../home';
 
 class Nav extends React.Component {
   constructor(props) {
@@ -35,12 +36,16 @@ class Nav extends React.Component {
               <h2>Hi {this.props.currentUser.username}</h2>
               <div className="home-button">
                 <Link to={`/`}>
-                <img src="https://res.cloudinary.com/booklog/image/upload/v1489782963/home_deekjt.png" alt="Home"/>
+                <img src="https://res.cloudinary.com/booklog/image/upload/v1489893893/home_1_ihjxmt.png" alt="Home"/>
                 </Link>
               </div>
               <button className="login-button" onClick={ this.props.logout }>Logout</button>
             </div>
           </div>
+
+          {/* <div>
+            <Home />
+          </div> */}
       </div>
       )
     } else {

@@ -9,9 +9,9 @@ class CreateUser extends React.Component {
 		this.demoSignIn = this.demoSignIn.bind(this);
 	}
 
-	componentDidUpdate() {
-		this.redirectIfLoggedIn();
-	}
+	// componentDidUpdate() {
+	// 	this.redirectIfLoggedIn();
+	// }
 
 	redirectIfLoggedIn() {
 		if (this.props.loggedIn) {

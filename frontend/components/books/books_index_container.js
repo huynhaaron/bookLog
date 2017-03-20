@@ -4,7 +4,8 @@ import { requestAllBooks } from '../../actions/book_actions';
 import { selectAllBooks } from '../../reducers/selectors';
 
 const mapStateToProps = state => ({
-  books: selectAllBooks(state)
+  books: selectAllBooks(state),
+  currentUser: state.session.currentUser
 });
 
 

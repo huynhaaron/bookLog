@@ -5,14 +5,13 @@ class Bookshelves extends Component {
   constructor(props) {
     super(props);
     this.state = { name: "",
-                  //  user_id: currentUser.id,
                    editState: false};
     this.handleSubmit = this.handleSubmit.bind(this);
 
   }
 
   componentDidMount() {
-    this.props.requestAllBookshelves;
+    this.props.requestAllBookshelves();
   }
 
 
@@ -25,56 +24,62 @@ class Bookshelves extends Component {
     e.preventDefault();
     const bookshelf = this.state;
     this.props.createBookshelf(bookshelf)
-      .then(() => this.setState({ name: "", user_id: currentUser.id }));
+      .then(() => this.setState({ name: ""}));
+  }
+
+
+  handleDelete(bookshelf) {
+    return (e) => {
+      e.preventDefault();
+      this.props.deleteBookshelf(bookshelf);
+    };
   }
 
   toggleEditState(e) {
     e.preventDefault();
     this.setState({ editState: !this.state.editState });
-    console.log(this.editState);
   }
 
   render() {
-    // if (this.state.editState) {
-      const bookshelves = this.props.bookshelves.map((bookshelf, idx) => {
-        return (
-          <span key={idx}>
-            <li className="shelf-text" key={idx}> {bookshelf.name} </li>
-          </span>
-        )
-      });
-    // }
-    // else {
-    //   let bookshelves = this.props.bookshelves.map((bookshelf, idx) => {
-    //     return (
-    //       <span key={idx}>
-    //         <li className="shelf-text" key={idx}> {bookshelf.name} </li>
-    //       </span>
-    //     )
-    //   });
-    // }
+    const bookshelves = this.props.bookshelves.map((bookshelf, idx) => {
+      return (
+        <span key={idx}>
+          <li className="shelf-text" key={idx}> {bookshelf.name}
+          <button key={bookshelf} onClick={this.handleDelete.bind(bookshelf)}>
+            <img src="https://res.cloudinary.com/booklog/image/upload/v1490041649/rubbish-bin_lx1eag.png"/>
+          </button>
+          </li>
+        </span>
+      )
+    });
 
-    return (
-      <nav className="bookshelves-container">
-        <h2 className="bookshelves-header">bookshelves</h2>
-        <button onClick={this.toggleEditState.bind(this)}> (edit) </button>
+    if (this.props.currentUser) {
+      return (
+        <div className="bookshelves-container">
+          <h2 className="bookshelves-header">bookshelves</h2>
+          <button onClick={this.toggleEditState.bind(this)}> (edit) </button>
 
-        <ul>
-          {bookshelves}
-        </ul>
+          <ul>
+            {bookshelves}
+          </ul>
 
-        <br />
-        <p><strong>Add a Shelf:</strong></p>
-        <form onSubmit={ this.handleSubmit }>
-          <input
-            className="shelf-text-input"
-            type="text"
-            onChange={this.update("name")}
-            />
-          <input className="shelf-add-button" type="submit" value="add" />
-        </form>
-      </nav>
-    )
+          <br />
+          <p><strong>Add a Shelf:</strong></p>
+          <form onSubmit={ this.handleSubmit }>
+            <input
+              className="shelf-text-input"
+              type="text"
+              onChange={this.update("name")}
+              />
+            <input className="shelf-add-button" type="submit" value="add" />
+          </form>
+        </div>
+      )
+    } else {
+      return (
+        <div></div>
+      )
+    }
   };
 
 

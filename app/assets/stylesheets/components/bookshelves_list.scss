@@ -1,20 +1,22 @@
 .bookshelves-container {
   display: flex;
-  width: 150px;
   flex-direction: column;
-  margin-left: 20px;
-  margin-top: 20px;
+  margin-left: 5px;
+  margin-top: 10px;
+  min-height: 100%;
+  width: 140px;
+  position: relative;
 }
 
 .bookshelves-header {
   color: #AAAAAA;
-  font-weight: bold;
+  font-size: 20px;
 }
 
 .shelf-text-input {
   border:1px solid black;
   width: 100px;
-  margin-right: 10px;
+  margin: 3px;
   border-radius: 5%;
   background-color: white;
 }
