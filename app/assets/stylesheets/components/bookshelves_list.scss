@@ -1,0 +1,35 @@
+.bookshelves-container {
+  display: flex;
+  width: 150px;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.bookshelves-header {
+  color: #AAAAAA;
+  font-weight: bold;
+}
+
+.shelf-text-input {
+  border:1px solid black;
+  width: 100px;
+  margin-right: 10px;
+  border-radius: 5%;
+  background-color: white;
+}
+
+.shelf-add-button {
+  border: 1px solid black;
+  border-radius: 10%;
+  background-color: #d6d4d5;
+  padding: 2px;
+}
+
+.shelf-text {
+  color: #00635D;
+}
+
+.shelf-text:hover {
+  text-decoration: underline;
+}

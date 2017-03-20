@@ -5,21 +5,23 @@ import merge from 'lodash/merge';
 
 
 const BookshelvesReducer = (state = {}, action) => {
-  Object.freeze(state);
-  switch (action.type) {
+  Object.freeze(state)
+  let newState = merge({}, state);
+
+  switch(action.type) {
     case RECEIVE_ALL_BOOKSHELVES:
-      return merge({}, action.bookshelves);
+      return action.bookshelves;
     case RECEIVE_BOOKSHELF:
-    return merge({}, state, {
-      [action.bookshelf.id] = action.bookshelf
-    });
+      const newBookshelf = {[action.bookshelf.id]: action.bookshelf};
+      return merge({}, state, newBookshelf);
     case REMOVE_BOOKSHELF:
-      newState = merge({}, state);
+      let newState = merge({}, state);
       delete newState[action.bookshelf.id];
-      return newState;  
+      return newState;
     default:
       return state;
   }
 };
+
 
 export default BookshelvesReducer;
