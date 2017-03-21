@@ -7,6 +7,6 @@ Rails.application.routes.draw do
     resources :users, only: [:create]
     resources :books, only: [:index, :show]
     resources :bookshelves, only: [:index, :show, :create, :update, :destroy]
-    resources :shelvedbooks, only: [:create, :destroy]
+    resources :shelvedbooks, only: [:index, :create, :destroy]
   end
 end

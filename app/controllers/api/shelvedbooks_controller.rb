@@ -1,15 +1,12 @@
 class Api::ShelvedbooksController < ApplicationController
+  def index
+    @shelvedbooks = Shelvedbook.all
+  end
 
   def create
-    target_bookshelf = Bookshelf.find_by(id: params[:bookshelf_id],
-                                         user_id: current_user.id)
-
-    debugger;
-    @shelvedbook = Shelvedbook.new(book_id: params[:book_id],
-                                   bookshelf_id: target_bookshelf.id)
-
+    @shelvedbook = Shelvedbook.new(shelvedbook_params)
     if @shelvedbook.save
-      render json: @shelvedbook, status: 200
+      render json: {}, status: 200
     else
       render json: @shelvedbook.errors.full_messages, status: 422
     end
@@ -20,14 +17,14 @@ class Api::ShelvedbooksController < ApplicationController
     @shelvedbook = Shelvedbook.find_by(book_id: params[:book_id],
                                        bookshelf_id: params[:bookshelf_id])
     @shelvedbook.destroy
-    render json: {}, status: 200
+    render json: {}
 
   end
 
   private
 
   def shelvedbook_params
-    params.require(:shelvedbooks).permit(:book_id, :bookshelf_id)
+    params.require(:shelvedbook).permit(:book_id, :bookshelf_id)
   end
 
 end

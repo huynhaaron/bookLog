@@ -5,11 +5,11 @@ export const fetchShelvedbooks = () => (
   })
 );
 
-export const createShelvedbook = (shelvedbook) => (
+export const createShelvedbook = (book_id, bookshelf_id) => (
   $.ajax({
     method: 'POST',
     url: 'api/shelvedbooks',
-    data: { book_id: shelvedbook.book_id, bookshelf_id: shelvedbook.bookshelf_id }
+    data: { book_id: book_id, bookshelf_id: bookshelf_id }
   })
 )
 

@@ -1,12 +1,13 @@
 import * as ShelvedbookAPIUtil from '../util/shelvedbooks_api_util.js';
 
+export const RECEIVE_SHELVEDBOOKS = 'RECEIVE_SHELVEDBOOKS';
 export const RECEIVE_SHELVEDBOOK = 'RECEIVE_SHELVEDBOOK';
 export const REMOVE_SHELVEDBOOK = 'REMOVE_SHELVEDBOOK';
 
 
 export const requestShelvedbooks = () => dispatch => {
   return ShelvedbookAPIUtil.fetchShelvedbooks()
-  .then(shelvedbooks => dispatch(receiveShelvedbooks(bookshelves)))
+  .then(shelvedbooks => dispatch(receiveShelvedbooks(shelvedbooks)))
 }
 
 
@@ -23,7 +24,7 @@ export const deleteShelvedbook = (shelvedbook) => dispatch => (
 
 export const receiveShelvedbooks = (shelvedbooks) => {
   return {
-    type: RECEIVE_SHELVEDBOOK,
+    type: RECEIVE_SHELVEDBOOKS,
     shelvedbooks
   };
 };
