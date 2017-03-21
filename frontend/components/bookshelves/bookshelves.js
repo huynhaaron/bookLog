@@ -5,7 +5,7 @@ class Bookshelves extends Component {
   constructor(props) {
     super(props);
     this.state = { name: "",
-                   editState: false};
+                   isEditing: false};
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
 
@@ -17,7 +17,6 @@ class Bookshelves extends Component {
 
 
   update(field) {
-    console.log(this.state);
 		return e => this.setState({[field]: e.currentTarget.value});
 	}
 
@@ -33,22 +32,28 @@ class Bookshelves extends Component {
     return (e) => {
       e.preventDefault();
       this.props.deleteBookshelf(bookshelf);
+      this.setState({isEditing: false});
     };
   }
 
   toggleEditState(e) {
     e.preventDefault();
-    this.setState({ editState: !this.state.editState });
+    let editing = !this.state.isEditing;
+    this.setState({ isEditing: editing });
   }
 
   render() {
+
+
     const bookshelves = this.props.bookshelves.map((bookshelf, idx) => {
       return (
         <span key={idx}>
           <li className="shelf-text" key={idx}> {bookshelf.name}
-          <button key={bookshelf} onClick={this.handleDelete(bookshelf)}>
-            <img src="https://res.cloudinary.com/booklog/image/upload/v1490041649/rubbish-bin_lx1eag.png"/>
-          </button>
+            {this.state.isEditing ?
+              <button key={bookshelf} onClick={this.handleDelete(bookshelf)}>
+                <img src="https://res.cloudinary.com/booklog/image/upload/v1490041649/rubbish-bin_lx1eag.png"/>
+              </button>
+                : ""}
           </li>
         </span>
       )
