@@ -27,7 +27,7 @@ const Root = ({ store }) => {
     <Provider store={ store }>
       <Router history={ hashHistory }>
           <Route path="/" component={ App } >
-          <IndexRoute component={ HomeContainer }/>
+          <IndexRoute component={ HomeContainer } />
             {/* <Route path="books" component={BooksIndexContainer}/> */}
             <Route path="book/:bookId" component={BookDetailContainer}/>
             <Route path="login" component={SessionFormContainer} />

@@ -1,23 +1,18 @@
-export const fetchShelvedbooks = () => (
-  $.ajax({
-    method: 'GET',
-    url: 'api/shelvedbooks'
-  })
-);
 
-export const createShelvedbook = (book_id, bookshelf_id) => (
+
+export const createShelvedbook = (shelvedBook) => (
   $.ajax({
     method: 'POST',
     url: 'api/shelvedbooks',
-    data: { book_id: book_id, bookshelf_id: bookshelf_id }
+    data: { shelvedBook }
   })
 )
 
 
-export const deleteShelvedbook = (shelvedbook) => (
+export const deleteShelvedbook = (shelvedBook) => (
   $.ajax({
     method: 'DELETE',
-    url: `api/shelvedbooks/${shelvedbook.id}`,
+    url: `api/shelvedbook/${shelvedbook.id}`
   })
 )
 

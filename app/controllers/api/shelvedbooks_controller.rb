@@ -1,7 +1,4 @@
 class Api::ShelvedbooksController < ApplicationController
-  def index
-    @shelvedbooks = Shelvedbook.all
-  end
 
   def create
     @shelvedbook = Shelvedbook.new(shelvedbook_params)
