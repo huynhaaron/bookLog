@@ -4,7 +4,7 @@ import SessionFormContainer from '../session_form/session_form_container';
 import CreateUserContainer from '../create_user/create_user_container';
 import ErrorList from '../error_list';
 import BooksIndexContainer from '../books/books_index_container';
-import Home from '../home';
+import Home from '../home/home_container';
 
 class Nav extends React.Component {
   constructor(props) {
@@ -42,10 +42,6 @@ class Nav extends React.Component {
               <button className="login-button" onClick={ this.props.logout }>Logout</button>
             </div>
           </div>
-
-          {/* <div>
-            <Home />
-          </div> */}
       </div>
       )
     } else {

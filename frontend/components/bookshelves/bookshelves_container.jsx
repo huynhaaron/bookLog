@@ -14,8 +14,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   requestAllBookshelves: () => dispatch(requestAllBookshelves()),
   createBookshelf: (bookshelf) => dispatch(createBookshelf(bookshelf)),
-  updateBookshelf: (bookshelf) => dispatch(updateBookshelf(bookshelf)),
-  deleteBookshelf: (bookshelf) => dispatch(deleteBookshelf(bookshelf))
+  deleteBookshelf: (bookshelf) => dispatch(deleteBookshelf(bookshelf)),
+  updateBookshelf: (bookshelf) => dispatch(updateBookshelf(bookshelf))
 });
 
 export default connect(

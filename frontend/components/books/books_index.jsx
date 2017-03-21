@@ -3,9 +3,9 @@ import BookIndexItem from './books_index_item';
 
 class BooksIndex extends Component {
 
-  componentDidMount() {
-    this.props.requestAllBooks();
-  }
+  // componentDidMount() {
+  //   this.props.requestAllBooks();
+  // }
 
   render() {
     const { books, currentUser, children } = this.props;
