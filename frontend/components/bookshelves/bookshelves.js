@@ -49,15 +49,20 @@ class Bookshelves extends Component {
       return (
         <span key={idx}>
           <li className="shelf-text" key={idx}> {bookshelf.name}
-            {this.state.isEditing ?
+            {!this.state.isEditing ? "" :
+              bookshelf.name === "all" ? "" :
+              bookshelf.name === "currently-reading" ? "" :
+              bookshelf.name === "read" ?  "" :
+              bookshelf.name ===  "to-read" ? "" :
               <button key={bookshelf} onClick={this.handleDelete(bookshelf)}>
                 <img src="https://res.cloudinary.com/booklog/image/upload/v1490041649/rubbish-bin_lx1eag.png"/>
-              </button>
-                : ""}
+              </button>}
           </li>
         </span>
       )
     });
+
+
 
     if (this.props.currentUser) {
       return (
