@@ -23,6 +23,10 @@ class User < ApplicationRecord
 
   has_many :bookshelves
 
+  has_many :shelvedbooks,
+           through: :bookshelves,
+           source: :books
+
   def create_default_bookshelves
     Bookshelf.create(name: 'all', user_id: self.id)
     Bookshelf.create(name: 'read', user_id: self.id)

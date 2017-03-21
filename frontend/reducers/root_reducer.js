@@ -5,12 +5,14 @@ import SessionReducer from './session_reducer';
 import BooksReducer from './books_reducer';
 import BookDetailReducer from './book_detail_reducer';
 import BookshelvesReducer from './bookshelves_reducer';
+import ShelvedbooksReducer from './shelvedbooks_reducer';
 
 const appReducer = combineReducers({
   session: SessionReducer,
   books: BooksReducer,
   bookDetail: BookDetailReducer,
-  bookshelves: BookshelvesReducer
+  bookshelves: BookshelvesReducer,
+  shelvedbooks: ShelvedbooksReducer
 
 });
 

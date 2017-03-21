@@ -22,12 +22,14 @@
 
 User.destroy_all
 Book.destroy_all
+Bookshelf.destroy_all
+Shelvedbook.destroy_all
 
+User.create!(username: "demo", password: "password")
+User.create!(username: "guest", password: "password")
 User.create!(username: "test123", password: "password")
 User.create!(username: "testing123", password: "password")
-User.create!(username: "guest", password: "password")
-User.create!(username: "demo", password: "password")
-User.create!(username: "demouser", password: "password")
+
 
 
 Book.create!(title: "Harry Potter and the Sorcerer's Stone",
@@ -186,3 +188,130 @@ This is a mystery story, not about the murder — and rebirth — of man’s spi
              publisher: "Plume",
              isbn: "0452011876",
              language: "en")
+
+Book.create!(title: "Gone with the Wind",
+            author: "Margaret Mitchell",
+            description: "Gone with the Wind is a novel written by Margaret Mitchell, first published in 1936. The story is set in Clayton County, Georgia, and Atlanta during the American Civil War and Reconstruction era. It depicts the struggles of young Scarlett O'Hara, the spoiled daughter of a well-to-do plantation owner, who must use every means at her disposal to claw her way out of the poverty she finds herself in after Sherman's March to the Sea. A historical novel, the story is a Bildungsroman or coming-of-age story, with the title taken from a poem written by Ernest Dowson.
+
+Gone with the Wind was popular with American readers from the onset and was the top American fiction bestseller in the year it was published and in 1937. As of 2014, a Harris poll found it to be the second favorite book of American readers, just behind the Bible. More than 30 million copies have been printed worldwide.",
+            cover_url: "https://images.gr-assets.com/books/1332603639l/237241.jpg",
+            avg_rating: 4.28,
+            pages: 1011,
+            publish_date: "1991-09-25",
+            publisher: "Pan Books",
+            isbn: "0330323490",
+            language: "en")
+
+Book.create!(title: "Lord of the Rings",
+            author: "J.R.R. Tolkien",
+            description: "J.R.R. Tolkien's The Lord of the Rings trilogy is a genuine masterpiece. The most widely read and influential fantasy epic of all time, it is also quite simply one of the most memorable and beloved tales ever told. Originally published in 1954, The Lord of the Rings set the framework upon which all epic/quest fantasy since has been built. Through the urgings of the enigmatic wizard Gandalf, young hobbit Frodo Baggins embarks on an urgent, incredibly treacherous journey to destroy the One Ring. This ring -- created and then lost by the Dark Lord, Sauron, centuries earlier -- is a weapon of evil, one that Sauron desperately wants returned to him. With the power of the ring once again his own, the Dark Lord will unleash his wrath upon all of Middle-earth. The only way to prevent this horrible fate from becoming reality is to return the Ring to Mordor, the only place it can be destroyed. Unfortunately for our heroes, Mordor is also Sauron's lair. The Lord of the Rings trilogy is essential reading not only for fans of fantasy but for lovers of classic literature as well...",
+            cover_url: "https://images.gr-assets.com/books/1411114164l/33.jpg",
+            avg_rating: 4.47,
+            pages: 1216,
+            publish_date: "2005-10-12",
+            publisher: "Houghton Mifflin Harcourt",
+            isbn: "061864015",
+            language: "en")
+
+Book.create!(title: "Great Expectations",
+            author: "Charles Dickens",
+            description: "In what may be Dickens's best novel, humble, orphaned Pip is apprenticed to the dirty work of the forge but dares to dream of becoming a gentleman — and one day, under sudden and enigmatic circumstances, he finds himself in possession of 'great expectations.' In this gripping tale of crime and guilt, revenge and reward, the compelling characters include Magwitch, the fearful and fearsome convict; Estella, whose beauty is excelled only by her haughtiness; and the embittered Miss Havisham, an eccentric jilted bride.",
+            cover_url: "https://images.gr-assets.com/books/1327920219l/2623.jpg",
+            avg_rating: 3.74,
+            pages: 505,
+            publish_date: "1998-06-25",
+            publisher: "Oxford University Press",
+            isbn: "0192833596",
+            language: "en")
+
+Book.create!(title: "Crime and Punishment",
+            author: "Fyodor Dostoyevsky",
+            description: "With the same suppleness, energy, and range of voices that won their translation of The Brothers Karamazov the PEN/Book-of-the-Month Club Prize, Pevear and Volokhonsky offer a brilliant translation of Dostoevsky's classic novel that presents a clear insight into this astounding psychological thriller. ",
+            cover_url: "https://images.gr-assets.com/books/1327909635l/28348.jpg",
+            avg_rating: 4.18,
+            pages: 564,
+            publish_date: "1993-03-02",
+            publisher: "Vintage Classics",
+            isbn: "06797345",
+            language: "en")
+
+Book.create!(title: "Sense and Sensibility",
+            author: "Jane Austen",
+            description: "Marianne Dashwood wears her heart on her sleeve, and when she falls in love with the dashing but unsuitable John Willoughby she ignores her sister Elinor's warning that her impulsive behaviour leaves her open to gossip and innuendo. Meanwhile Elinor, always sensitive to social convention, is struggling to conceal her own romantic disappointment, even from those closest to her. Through their parallel experience of love - and its threatened loss - the sisters learn that sense must mix with sensibility if they are to find personal happiness in a society where status and money govern the rules of love. ",
+            cover_url: "https://images.gr-assets.com/books/1347328574l/6147464.jpg",
+            avg_rating: 4.06,
+            pages: 448,
+            publish_date: "2008-11-06",
+            publisher: "Penguin",
+            isbn: "0141040378",
+            language: "en")
+
+Book.create!(title: "The Color Purple",
+            author: "Alice Walker",
+            description: "Taking place mostly in rural Georgia, the story focuses on the life of African-American women in the southern United States in the 1930s, addressing numerous issues including their exceedingly low position in American social culture. The novel has been the frequent target of censors and appears on the American Library Association list of the 100 Most Frequently Challenged Books of 2000–2009 at number seventeen because of the sometimes explicit content, particularly in terms of violence",
+            cover_url: "https://images.gr-assets.com/books/1440374985l/1100590.jpg",
+            avg_rating: 4.16,
+            pages: 295,
+            publish_date: "2004-04-01",
+            publisher: "Pocket",
+            isbn: "0671727796",
+            language: "en")
+
+Book.create!(title: "Watership Down",
+            author: "Richard Adams",
+            description: "Set in England's Downs, a once idyllic rural landscape, this stirring tale of adventure, courage and survival follows a band of very special creatures on their flight from the intrusion of man and the certain destruction of their home. Led by a stouthearted pair of friends, they journey forth from their native Sandleford Warren through the harrowing trials posed by predators and adversaries, to a mysterious promised land and a more perfect society.",
+            cover_url: "https://images.gr-assets.com/books/1405136931l/76620.jpg",
+            avg_rating: 4.05,
+            pages: 478,
+            publish_date: "1975-06-01",
+            publisher: "Avon Books",
+            isbn: "038039586X",
+            language: "en")
+
+Book.create!(title: "The Remains of the Day",
+            author: "Kazuo Ishiguro",
+            description: "In 1956, Stevens, a long-serving butler at Darlington Hall, decides to take a motoring trip through the West Country. The six-day excursion becomes a journey into the past of Stevens and England, a past that takes in fascism, two world wars, and an unrealised love between the butler and his housekeeper. Ishiguro's dazzling novel is a sad and humorous love story, a meditation on the condition of modern man, and an elegy for England at a time of acute change. ",
+            cover_url: "https://images.gr-assets.com/books/1327128714l/28921.jpg",
+            avg_rating: 4.1,
+            pages: 258,
+            publish_date: "2005-01-01",
+            publisher: "Faber & Faber",
+            isbn: "0571225381",
+            language: "en")
+
+Book.create!(title: "The Pillars of the Earth",
+            author: "Ken Follett",
+            description: "The building of the cathedral, with the almost eerie artistry of the unschooled stonemasons, is the center of the drama. Around the site of the construction, Follett weaves a story of betrayal, revenge, and love, which begins with the public hanging of an innocent man and ends with the humiliation of a king.",
+            cover_url: "https://images.gr-assets.com/books/1417307281l/442119.jpg",
+            avg_rating: 4.29,
+            pages: 983,
+            publish_date: "1990-07-09",
+            publisher: "Signet",
+            isbn: "0451166892",
+            language: "en")
+
+Book.create!(title: "American Psycho",
+            author: "Bret Easton Ellis",
+            description: "Patrick Bateman is twenty-six and he works on Wall Street, he is handsome, sophisticated, charming and intelligent. He is also a psychopath. Taking us to head-on collision with America's greatest dream—and its worst nightmare—American Psycho is bleak, bitter, black comedy about a world we all recognise but do not wish to confront.",
+            cover_url: "https://images.gr-assets.com/books/1436934349l/28676.jpg",
+            avg_rating: 3.81,
+            pages: 399,
+            publish_date: "1991-03-01",
+            publisher: "Vintage Contemporaries / Random House",
+            isbn: "0679735771",
+            language: "en")
+
+
+
+
+
+
+Shelvedbook.create!(bookshelf_id: 1, book_id: 1)
+Shelvedbook.create!(bookshelf_id: 1, book_id: 2)
+Shelvedbook.create!(bookshelf_id: 1, book_id: 3)
+Shelvedbook.create!(bookshelf_id: 1, book_id: 4)
+Shelvedbook.create!(bookshelf_id: 1, book_id: 5)
+Shelvedbook.create!(bookshelf_id: 2, book_id: 6)
+Shelvedbook.create!(bookshelf_id: 2, book_id: 7)
+Shelvedbook.create!(bookshelf_id: 2, book_id: 8)
+Shelvedbook.create!(bookshelf_id: 2, book_id: 9)

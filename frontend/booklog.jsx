@@ -7,6 +7,7 @@ import Root from './components/root';
 import { signup, login, logout } from './actions/session_actions';
 import { requestAllBooks, requestBook } from './actions/book_actions';
 import { requestAllBookshelves, deleteBookshelf } from './actions/bookshelf_actions';
+import { requestShelvedbooks, createShelvedbook } from './actions/shelvedbook_actions';
 
 import { selectAllBooks } from './reducers/selectors';
 
@@ -19,6 +20,8 @@ window.selectAllBooks = selectAllBooks;
 window.requestBook = requestBook;
 window.requestAllBookshelves = requestAllBookshelves;
 window.deleteBookshelf = deleteBookshelf;
+window.requestShelvedbooks = requestShelvedbooks;
+window.createShelvedbook = createShelvedbook;
 
 
 document.addEventListener('DOMContentLoaded', () => {
