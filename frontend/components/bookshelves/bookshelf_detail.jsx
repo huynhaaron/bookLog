@@ -31,9 +31,7 @@ class BookshelfDetail extends Component {
             <BookshelvesIndexContainer />
             <div className="book_index_show_all">
               <div className="bookshelves-detail-header">
-                <p>
-                  <p><Link to={`/`}>   Home ></Link> {this.props.currentShelf.name} books</p>
-                </p>
+                <p><Link to={`/`}>   Home ></Link> {this.props.currentShelf.name} books</p>
               </div>
               {list_of_books}
             </div>
@@ -41,7 +39,15 @@ class BookshelfDetail extends Component {
       );
     } else {
       return (
-        <div></div>
+        <div className="home-container">
+          <BookshelvesIndexContainer />
+          <div className="book_index_show_all">
+            <div className="bookshelves-detail-header">
+              <p><Link to={`/`}>   Home ></Link> {this.props.currentShelf.name} books</p>
+            </div>
+              <p className="no-books-message"> No books are in the {this.props.currentShelf.name} shelf</p>
+          </div>
+        </div>
       )
     }
   }

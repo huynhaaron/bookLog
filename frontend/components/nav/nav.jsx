@@ -29,7 +29,7 @@ class Nav extends React.Component {
                 <img src={"https://res.cloudinary.com/booklog/image/upload/v1489615791/open-book32_hdbp4s.png"} alt="Logo" />
               </Link>
               <Link to={`/`}>
-                <p className="main-logo-text"><strong>BookLog</strong></p>
+                <p className="main-logo-text"><strong>   BookLog</strong></p>
               </Link>
             </div>
             <div className="login-form-right">

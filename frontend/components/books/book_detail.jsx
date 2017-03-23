@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router';
+import AddToShelfContainer from './add_to_shelf_container';
 
 class BookDetail extends Component {
+
+  constructor(props){
+    super(props);
+  }
   componentDidMount() {
     this.props.requestBook(this.props.params.bookId);
     this.props.requestAllBookshelves();
@@ -17,17 +22,21 @@ class BookDetail extends Component {
     return parseInt(this.props.params.bookId) === this.props.bookDetail.id;
   }
 
-
+  createShelvedbook(e) {
+		e.preventDefault();
+    console.log(e.currentTarget.value);
+		const shelvedbook = this.state;
+		// this.props.createShelvedbook(shelvedbook);
+  }
 
   render() {
 
     const { bookDetail, bookshelves, currentUser, children } = this.props;
 
     let user_bookshelves = Object.keys(bookshelves).map((id) => bookshelves[id]);
-    console.log(user_bookshelves);
 
     let list_of_user_bookshelves = user_bookshelves.map((bookshelf, idx) => {
-      return <li key={idx}>{bookshelf.name}</li>
+      return <li onClick={this.createShelvedbook} key={idx}>{bookshelf.name}</li>
     })
 
     if (currentUser) {
@@ -37,19 +46,26 @@ class BookDetail extends Component {
             <figure>
               <img className="book-detail-image" src={bookDetail.cover_url} alt={bookDetail.title} />
               <div>
-                  <p> Add this book to a shelf:
-                    {list_of_user_bookshelves}
-                  </p>
+                  <AddToShelfContainer />
               </div>
             </figure>
-            <ul>
+
+
+            <ul className="book-detail-information">
+              <li>
+                <div className="book-detail-header">
+                    <p><Link to={`/`}>   Home ></Link> {bookDetail.title}</p>
+                </div>
+              </li>
               <li className="book-title">
                 {bookDetail.title}
               </li>
+
               <li>{bookDetail.author ? `author:  ${bookDetail.author}` : ""}</li>
               <li>{bookDetail.pages ? `pages:  ${bookDetail.pages}` : ""}</li>
               <li>{bookDetail.avg_rating ? `avg rating:  ${bookDetail.avg_rating}` : ""}</li>
               <li>{bookDetail.isbn ? `isbn:  ${bookDetail.isbn}` : ""}</li>
+            <br />
               <li>{bookDetail.description ? `description:  ${bookDetail.description}` : ""}</li>
             </ul>
             {children}

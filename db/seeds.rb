@@ -303,6 +303,11 @@ Book.create!(title: "American Psycho",
 
 
 
+Bookshelf.create!(user_id: 1, name: "sci-fi")
+Bookshelf.create!(user_id: 1, name: "classics")
+Bookshelf.create!(user_id: 1, name: "harry potter")
+Bookshelf.create!(user_id: 1, name: "thrillers")
+Bookshelf.create!(user_id: 1, name: "romance")
 
 
 
@@ -315,3 +320,6 @@ Shelvedbook.create!(bookshelf_id: 2, book_id: 6)
 Shelvedbook.create!(bookshelf_id: 2, book_id: 7)
 Shelvedbook.create!(bookshelf_id: 2, book_id: 8)
 Shelvedbook.create!(bookshelf_id: 2, book_id: 9)
+
+Review.create(user_id: 1, username: "demo", book_id: 1, title: "Cool Book", body: "Yes")
+Review.create(user_id: 2, username: "guest", book_id: 1, title: "Snape is my hero", body: "Best book ever")

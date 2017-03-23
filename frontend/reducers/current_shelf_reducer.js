@@ -5,9 +5,7 @@ import merge from 'lodash/merge';
 const _noShelfSelected = {}
 
 const CurrentShelfReducer = (state = _noShelfSelected, action) => {
-  Object.freeze(state)
-  let newState = merge({}, state);
-
+  Object.freeze(state);
   switch(action.type) {
     case RECEIVE_ONE_BOOKSHELF:
       return action.bookshelf;

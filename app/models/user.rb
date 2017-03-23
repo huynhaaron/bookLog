@@ -27,8 +27,9 @@ class User < ApplicationRecord
            through: :bookshelves,
            source: :books
 
+  has_many :reviews
+  
   def create_default_bookshelves
-    Bookshelf.create(name: 'all', user_id: self.id)
     Bookshelf.create(name: 'read', user_id: self.id)
     Bookshelf.create(name: 'currently-reading', user_id: self.id)
     Bookshelf.create(name: 'to-read', user_id: self.id)

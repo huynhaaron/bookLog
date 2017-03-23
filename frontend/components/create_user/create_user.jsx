@@ -59,9 +59,9 @@ class CreateUser extends React.Component {
                 placeholder="Password"/>
 						<br/>
 						<input className="create-button" type="submit" value="Join Now" />
-						<button className="create-button" onClick={this.demoSignIn} >Demo</button>
 					</div>
 				</form>
+				<button className="create-button" onClick={this.demoSignIn} >Demo</button>
 			</div>
 
 		);

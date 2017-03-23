@@ -6,8 +6,29 @@
 
 .book-detail-image {
   width: 200px;
+  box-shadow: 8px 8px 8px #a09f9f;
+  filter: contrast(107%);
+
+}
+
+.book-detail-header {
+  position: relative;
+  color: #AAAAAA;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.book-detail-information {
+  width: 500px;
 }
 
 .book-title {
   font-size: 25px;
+}
+
+.no-books-message {
+  position: fixed; /* or absolute */
+  top: 20%;
+  left: 23%;
+  font-size: 30px;
 }

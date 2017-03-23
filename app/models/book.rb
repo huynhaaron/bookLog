@@ -20,7 +20,9 @@
 
 class Book < ApplicationRecord
   validates :title, :author, presence: true
-  # 
+
+  has_many :reviews
+  #
   # has_and_belongs_to_many :bookshelves
   #
   # has_and_belongs_to_many :users, through: :bookshelves

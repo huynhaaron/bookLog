@@ -10,18 +10,18 @@ class BookshelvesIndex extends Component {
     this.handleDelete = this.handleDelete.bind(this);
   }
 
-  // componentWillReceiveProps(nextprops) {
-  //   if (nextprops.currentUser && nextprops !== this.props) {
-  //     nextprops.requestAllBookshelves();
-  //   }
-  // }
-
-
-  componentDidMount() {
-    if (this.props.currentUser) {
-      this.props.requestAllBookshelves();
+  componentWillReceiveProps(nextprops) {
+    if (nextprops.currentUser && nextprops.bookshelves.length <= 1) {
+      nextprops.requestAllBookshelves();
     }
   }
+
+
+  // componentDidMount() {
+  //   if (this.props.currentUser) {
+  //     this.props.requestAllBookshelves();
+  //   }
+  // }
 
   update(field) {
 		return e => this.setState({[field]: e.currentTarget.value});
