@@ -1,20 +1,27 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-class Bookshelves extends Component {
+class BookshelvesIndex extends Component {
   constructor(props) {
     super(props);
     this.state = { name: "",
                    isEditing: false};
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
-
   }
+
+  // componentWillReceiveProps(nextprops) {
+  //   if (nextprops.currentUser && nextprops !== this.props) {
+  //     nextprops.requestAllBookshelves();
+  //   }
+  // }
+
 
   componentDidMount() {
-    this.props.requestAllBookshelves();
+    if (this.props.currentUser) {
+      this.props.requestAllBookshelves();
+    }
   }
-
 
   update(field) {
 		return e => this.setState({[field]: e.currentTarget.value});
@@ -44,11 +51,13 @@ class Bookshelves extends Component {
 
   render() {
 
-
     const bookshelves = this.props.bookshelves.map((bookshelf, idx) => {
       return (
         <span key={idx}>
-          <li className="shelf-text" key={idx}> {bookshelf.name}
+          <li className="shelf-text" key={idx}>
+            <Link to={`bookshelves/${bookshelf.id}`}>
+            {bookshelf.name}
+            </Link>
             {!this.state.isEditing ? "" :
               bookshelf.name === "all" ? "" :
               bookshelf.name === "currently-reading" ? "" :
@@ -62,14 +71,11 @@ class Bookshelves extends Component {
       )
     });
 
-
-
     if (this.props.currentUser) {
       return (
         <div className="bookshelves-container">
           <h2 className="bookshelves-header">bookshelves</h2>
           <button onClick={this.toggleEditState.bind(this)}> (edit) </button>
-
           <ul>
             {bookshelves}
           </ul>
@@ -85,11 +91,13 @@ class Bookshelves extends Component {
               />
             <input className="shelf-add-button" type="submit" value="add" />
           </form>
+
         </div>
       )
     } else {
       return (
-        <div></div>
+        <div>
+        </div>
       )
     }
   };
@@ -97,4 +105,4 @@ class Bookshelves extends Component {
 
 }
 
-export default Bookshelves;
+export default BookshelvesIndex;

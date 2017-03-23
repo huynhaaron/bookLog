@@ -1,6 +1,7 @@
 import { RECEIVE_ALL_BOOKSHELVES,
          RECEIVE_BOOKSHELF,
-         REMOVE_BOOKSHELF } from '../actions/bookshelf_actions';
+         REMOVE_BOOKSHELF,
+         RECEIVE_ONE_BOOKSHELF } from '../actions/bookshelf_actions';
 import merge from 'lodash/merge';
 
 

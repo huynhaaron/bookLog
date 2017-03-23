@@ -3,10 +3,17 @@ import * as BookshelfAPIUtil from '../util/bookshelves_api_util';
 export const RECEIVE_ALL_BOOKSHELVES = 'RECEIVE_ALL_BOOKSHELVES';
 export const RECEIVE_BOOKSHELF = 'RECEIVE_BOOKSHELF';
 export const REMOVE_BOOKSHELF = 'REMOVE_BOOKSHELF';
+export const RECEIVE_ONE_BOOKSHELF = 'RECEIVE_ONE_BOOKSHELF';
+export const REMOVE_ONE_BOOKSHELF = 'REMOVE_ONE_BOOKSHELF';
 
 export const requestAllBookshelves = () => dispatch => {
   return BookshelfAPIUtil.fetchBookshelves()
   .then(bookshelves => dispatch(receiveAllBookshelves(bookshelves)))
+}
+
+export const requestBookshelf = (bookshelf) => dispatch => {
+  return BookshelfAPIUtil.fetchBookshelf(bookshelf)
+  .then(bookshelf => dispatch(receiveOneBookshelf(bookshelf)))
 }
 
 export const createBookshelf = (bookshelf) => dispatch => (
@@ -21,12 +28,12 @@ export const updateBookshelf = (bookshelf) => dispatch => (
 
 export const deleteBookshelf = (bookshelf) => dispatch => {
   return (
-  BookshelfAPIUtil.deleteBookshelf(bookshelf)
-    .then(bookshelf => {
-      return dispatch(removeBookshelf(bookshelf));
-    }
+    BookshelfAPIUtil.deleteBookshelf(bookshelf)
+      .then(bookshelf => {
+        return dispatch(removeBookshelf(bookshelf));
+      }
+    )
   )
-)
 }
 
 export const receiveAllBookshelves = (bookshelves) => {
@@ -43,11 +50,22 @@ export const receiveBookshelf = (bookshelf) => {
   };
 };
 
+
 export const removeBookshelf = (bookshelf) => ({
   type: REMOVE_BOOKSHELF,
   bookshelf
 });
-//
-// export const startLoadingUserBookshelves = () => ({
-// 	type: START_LOADING_USER_BOOKSHELVES
-// });
+
+export const receiveOneBookshelf = (bookshelf) => {
+  return {
+    type: RECEIVE_ONE_BOOKSHELF,
+    bookshelf
+  }
+}
+
+export const removeCurrentBookshelf = (bookshelf) => {
+  return {
+    type: REMOVE_ONE_BOOKSHELF,
+    bookshelf
+  }
+}

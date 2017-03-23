@@ -5,6 +5,13 @@ export const fetchBookshelves = () => (
   })
 );
 
+export const fetchBookshelf = (id) => (
+  $.ajax({
+    method: 'GET',
+    url: `api/bookshelves/${id}`
+  })
+)
+
 export const createBookshelf = (bookshelf) => (
   $.ajax({
     method: 'POST',

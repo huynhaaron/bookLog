@@ -1,5 +1,4 @@
-json.partial! "api/bookshelves/bookshelf", bookshelf: @bookshelf
-
+json.extract! @bookshelf, :id, :name, :user_id
 
 json.shelvedbooks do
   @bookshelf.books.each do |book|

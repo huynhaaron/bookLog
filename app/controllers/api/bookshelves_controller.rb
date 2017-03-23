@@ -18,7 +18,7 @@ class Api::BookshelvesController < ApplicationController
   def show
     @bookshelf = Bookshelf.find(params[:id])
     if @bookshelf
-      render json: @bookshelf
+      render 'api/bookshelves/show'
     else
       render json: ["Unable to find books"], status: 404
     end
