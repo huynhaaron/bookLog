@@ -16,7 +16,7 @@ sufficient CSS styling:
 
 - [ ] Hosting on Heroku
 - [ ] New account creation, login, and guest/demo login
-- [ ] Production README [sample](docs/production_readme.md)
+- [ ] Production README
 - [ ] Books
 - [ ] Bookshelves
 - [ ] Read Status (will read, have read, etc.)

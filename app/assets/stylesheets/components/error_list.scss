@@ -1,4 +1,4 @@
-/* The alert message box */
+
 .alert {
   padding: 10px;
   color: black;
@@ -14,40 +14,8 @@
   border-radius: 20px;
   bottom-margin: 10px;
 
-  // -webkit-animation: anim 3.5s 1;
-  // transform: translateX(100%);
-
 }
 
 .alert-text {
   color: white;
 }
-
-// @-webkit-keyframes anim {
-//   0% {
-//     transform: translateX(100%);
-//   }
-//   14.28% {
-//     transform: translateX(0);
-//   }
-//   85.71% {
-//     transform: translateX(0);
-//   }
-//   100% {
-//     transform: translateX(100%);
-//   }
-// }
-// @keyframes anim {
-//   0% {
-//     transform: translateX(100%);
-//   }
-//   14.28% {
-//     transform: translateX(0);
-//   }
-//   85.71% {
-//     transform: translateX(0);
-//   }
-//   100% {
-//     transform: translateX(100%);
-//   }
-// }

@@ -9,10 +9,6 @@ class CreateUser extends React.Component {
 		this.demoSignIn = this.demoSignIn.bind(this);
 	}
 
-	// componentDidUpdate() {
-	// 	this.redirectIfLoggedIn();
-	// }
-
 	redirectIfLoggedIn() {
 		if (this.props.loggedIn) {
 			this.props.router.push("/");
@@ -61,7 +57,7 @@ class CreateUser extends React.Component {
 						<input className="create-button" type="submit" value="Join Now" />
 					</div>
 				</form>
-				<button className="create-button" onClick={this.demoSignIn} >Demo</button>
+				<button className="demo-button" onClick={this.demoSignIn} >Demo</button>
 			</div>
 
 		);

@@ -8,12 +8,17 @@ class BookDetail extends Component {
   constructor(props){
     super(props);
   }
-  
-  componentDidMount() {
-    this.props.requestBook(this.props.params.bookId);
-    this.props.requestAllBookshelves();
-    this.props.requestReviews(this.props.params.bookId);
+
+  componentDidMount(previousProps) {
+      this.props.requestBook(this.props.params.bookId);
+      this.props.requestAllBookshelves();
   }
+  // 
+  // componentDidUpdate() {
+  //   this.props.requestBook(this.props.params.bookId);
+  // }
+
+
 
   routeIsCorrect() {
     return parseInt(this.props.params.bookId) === this.props.bookDetail.id;

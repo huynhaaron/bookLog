@@ -7,19 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-# Book.create!(title: "N/A",
-#              author: "N/A",
-#              description: "N/A",
-#              cover_url: "N/A",
-#              avg_rating: 4.5,
-#              pages: 0,
-#              publish_date: "N/A",
-#              publisher: "N/A",
-#              isbn: "N/A",
-#              language: "en",
-#              buy_url: "N/A")
-
-
 User.destroy_all
 Book.destroy_all
 Bookshelf.destroy_all
@@ -29,8 +16,8 @@ User.create!(username: "demo", password: "password")
 User.create!(username: "guest", password: "password")
 User.create!(username: "test123", password: "password")
 User.create!(username: "testing123", password: "password")
-
-
+User.create!(username: "jack", password: "password")
+User.create!(username: "john", password: "password")
 
 Book.create!(title: "Harry Potter and the Sorcerer's Stone",
              author: "J.K. Rowling",
@@ -301,6 +288,51 @@ Book.create!(title: "American Psycho",
             isbn: "0679735771",
             language: "en")
 
+Book.create!(title: "A Game of Thrones",
+            author: "George R.R. Martin",
+            description: "Summers span decades. Winter can last a lifetime. And the struggle for the Iron Throne has begun.
+
+As Warden of the north, Lord Eddard Stark counts it a curse when King Robert bestows on him the office of the Hand. His honour weighs him down at court where a true man does what he will, not what he must … and a dead enemy is a thing of beauty.
+
+The old gods have no power in the south, Stark’s family is split and there is treachery at court. Worse, the vengeance-mad heir of the deposed Dragon King has grown to maturity in exile in the Free Cities. He claims the Iron Throne.",
+            cover_url: "https://images.gr-assets.com/books/1436732693l/13496.jpg",
+            avg_rating: 4.44,
+            pages: 835,
+            publish_date: "2005-08-01",
+            publisher: "Bantam",
+            isbn: "0553588486",
+            language: "en")
+
+Book.create!(title: "The Women in the Castle",
+            author: "Jessica Shattuck",
+            description: "Set at the end of World War II, in a crumbling Bavarian castle that once played host to all of German high society, a powerful and propulsive story of three widows whose lives and fates become intertwined—an affecting, shocking, and ultimately redemptive novel from the author of the New York Times Notable Book The Hazards of Good Breeding
+
+Amid the ashes of Nazi Germany’s defeat, Marianne von Lingenfels returns to the once grand castle of her husband’s ancestors, an imposing stone fortress now fallen into ruin following years of war. The widow of a resistor murdered in the failed July, 20, 1944, plot to assassinate Adolf Hitler, Marianne plans to uphold the promise she made to her husband’s brave conspirators: to find and protect their wives, her fellow resistance widows.
+
+First, Marianne rescues six-year-old Martin, the son of her dearest childhood friend, from a Nazi reeducation home. Together, they make their way across the smoldering wreckage of their homeland to Berlin, where Martin’s mother, the beautiful and naïve Benita, has fallen into the hands of occupying Red Army soldiers. Then she locates Ania, another resistor’s wife, and her two boys, now refugees languishing in one of the many camps that house the millions displaced by the war.
+
+As Marianne assembles this makeshift family from the ruins of her husband’s resistance movement, she is certain their shared pain and circumstances will hold them together. But she quickly discovers that the black-and-white, highly principled world of her privileged past has become infinitely more complicated, filled with secrets and dark passions that threaten to tear them apart. Eventually, all three women must come to terms with the choices that have defined their lives before, during, and after the war—each with their own unique share of challenges. ",
+            cover_url: "https://images.gr-assets.com/books/1472678686l/30653967.jpg",
+            avg_rating: 4.22,
+            pages: 368,
+            publish_date: "2014-03-28",
+            publisher: "William Morrow",
+            isbn: "0062563661",
+            language: "en")
+
+Book.create!(title: "Harry Potter and the Chamber of Secrets",
+            author: "J.K. Rowling",
+            description: "The Dursleys were so mean and hideous that summer that all Harry Potter wanted was to get back to the Hogwarts School for Witchcraft and Wizardry. But just as he's packing his bags, Harry receives a warning from a strange, impish creature named Dobby who says that if Harry Potter returns to Hogwarts, disaster will strike.
+
+And strike it does. For in Harry's second year at Hogwarts, fresh torments and horrors arise, including an outrageously stuck-up new professor, Gilderoy Lockhart, a spirit named Moaning Myrtle who haunts the girls' bathroom, and the unwanted attentions of Ron Weasley's younger sister, Ginny. But each of these seem minor annoyances when the real trouble begins, and someone, or something, starts turning Hogwarts students to stone. Could it be Draco Malfoy, a more poisonous rival than ever? Could it possibly be Hagrid, whose mysterious past is finally told? Or could it be the one everyone at Hogwarts most suspects: Harry Potter himself?",
+            cover_url: "https://images.gr-assets.com/books/1474169725l/15881.jpg",
+            avg_rating: 4.37,
+            pages: 341,
+            publish_date: "1992-07-02",
+            publisher: "Scholastic Inc.",
+            isbn: "043906486",
+            language: "en")
+
 
 
 Bookshelf.create!(user_id: 1, name: "sci-fi")
@@ -320,6 +352,37 @@ Shelvedbook.create!(bookshelf_id: 2, book_id: 6)
 Shelvedbook.create!(bookshelf_id: 2, book_id: 7)
 Shelvedbook.create!(bookshelf_id: 2, book_id: 8)
 Shelvedbook.create!(bookshelf_id: 2, book_id: 9)
+Shelvedbook.create!(bookshelf_id: 3, book_id: 15)
+Shelvedbook.create!(bookshelf_id: 3, book_id: 17)
+Shelvedbook.create!(bookshelf_id: 3, book_id: 11)
+Shelvedbook.create!(bookshelf_id: 3, book_id: 20)
+Shelvedbook.create!(bookshelf_id: 3, book_id: 14)
+Shelvedbook.create!(bookshelf_id: 3, book_id: 12)
+Shelvedbook.create!(bookshelf_id: 21, book_id: 1)
+Shelvedbook.create!(bookshelf_id: 21, book_id: 26)
+Shelvedbook.create!(bookshelf_id: 19, book_id: 3)
+Shelvedbook.create!(bookshelf_id: 20, book_id: 4)
+Shelvedbook.create!(bookshelf_id: 20, book_id: 5)
+Shelvedbook.create!(bookshelf_id: 20, book_id: 6)
+Shelvedbook.create!(bookshelf_id: 10, book_id: 9)
+Shelvedbook.create!(bookshelf_id: 10, book_id: 8)
+Shelvedbook.create!(bookshelf_id: 10, book_id: 18)
 
-Review.create(user_id: 1, username: "demo", book_id: 1, title: "Cool Book", body: "Yes")
-Review.create(user_id: 2, username: "guest", book_id: 1, title: "Snape is my hero", body: "Best book ever")
+Review.create!(user_id: 1, username: "demo", book_id: 1, title: "Cool Book", body: "Yes")
+Review.create!(user_id: 2, username: "guest", book_id: 1, title: "Snape is my hero", body: "Best book ever")
+Review.create!(user_id: 1, username: "demo", book_id: 2, title: "Must Read!", body: "Lots of feels")
+Review.create!(user_id: 3, username: "guest", book_id: 2, title: "Assigned high school reading", body: "Great book")
+Review.create!(user_id: 4, username: "demo", book_id: 3, title: "Space", body: "the final frontier")
+Review.create!(user_id: 2, username: "guest", book_id: 3, title: "Movie cannot compare to the book", body: "Enders game is great")
+Review.create!(user_id: 4, username: "demo", book_id: 6, title: "????", body: "Is Joseph Conrad a racist? ")
+Review.create!(user_id: 2, username: "guest", book_id: 6, title: "Highly recommended", body: "It was a breathtaking read. There are few books which make such a powerful impression as 'Heart of darkness' does. Written more than a century ago, the book and its undying theme hold just as much significance even today. Intense and compelling, it looks into the darkest recesses of human nature. Conrad takes the reader through a horrific tale in a very gripping voice.")
+Review.create!(user_id: 4, username: "demo", book_id: 4, title: "Cool", body: "A perfect book. People will still be reading this in a thousand years time, when communism is just a footnote.")
+Review.create!(user_id: 2, username: "guest", book_id: 4, title: "All animals are equal, but some animals are more equal than others. Those damn PIGS.")
+Review.create!(user_id: 4, username: "demo", book_id: 5, title: "George and Lenny", body: "Trouble with mice is you always kill 'em.Breathtaking prose, touching characters and a heart breaking ending. Who said only lengthy novel can make an impact?")
+Review.create!(user_id: 2, username: "guest", book_id: 5, title: "Best book!", body: "It's the way Steinbeck describes things that gets me.")
+Review.create!(user_id: 4, username: "demo", book_id: 7, title: "Boo", body: "Memoirs of a Geisha is an American novel, and as such the attempt at West does East, especially on the complex and delicate subject of the geisha, is compelling, interesting, but also heavy-handed and ultimately ineffective (even more so in the case of the film).")
+Review.create!(user_id: 2, username: "guest", book_id: 7, title: "Average", body: "Like eating fancy dessert at a gourmet restaurant, Memoirs of a Geisha is beautiful, melts lightly off the tongue and will be forgotten shortly after it's done. The language is strikingly lovely, and Golden paints a remarkable picture of a time and place. ")
+Review.create!(user_id: 4, username: "demo", book_id: 8, title: "Must Read", body: "Jay Gatsby, who dreamed a dream with the passion and courage few possess - and the tragedy was that it was a wrong dream colliding with reality that was even more wrong - and deadly. ")
+Review.create!(user_id: 2, username: "guest", book_id: 8, title: "Terrible!", body: "This is my least-favorite classic of all time. Probably even my least favorite book, ever. ")
+Review.create!(user_id: 4, username: "demo", book_id: 9, title: "Boo", body: "")
+Review.create!(user_id: 2, username: "guest", book_id: 9, title: "Boo", body: "")

@@ -1,10 +1,9 @@
 import * as ReviewAPIUtil from '../util/reviews_api_util';
+import { receiveBook } from './book_actions';
 
 export const RECEIVE_REVIEWS = "RECEIVE_REVIEWS";
 export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
 export const CLEAR_REVIEWS = "CLEAR_REVIEWS";
-export const RECEIVE_REVIEW_ERRORS = "RECEIVE_REVIEW_ERRORS";
-export const CLEAR_ERRORS = "CLEAR_ERRORS";
 
 export const receiveReviews = (reviews) => ({
   type: RECEIVE_REVIEWS,
@@ -20,14 +19,6 @@ export const clearReviews = () => ({
   type: CLEAR_REVIEWS
 });
 
-export const receiveReviewErrors = errors => ({
-  type: RECEIVE_REVIEW_ERRORS,
-  errors
-});
-
-export const clearErrors = () => ({
-  type: CLEAR_ERRORS
-});
 
 export const requestReviews = (bookId) => dispatch => (
   ReviewAPIUtil.fetchReviews(bookId)
@@ -36,6 +27,5 @@ export const requestReviews = (bookId) => dispatch => (
 
 export const createReview = (review) => dispatch => (
   ReviewAPIUtil.createReview(review)
-  .then(res => dispatch(receiveReview(res)))
-  // .fail(err => dispatch(receiveReviewErrors(err.responseJSON)))
+    .then(book => dispatch(receiveBook(book)))
 );

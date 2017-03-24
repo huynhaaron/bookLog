@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import { Link, withRouter } from 'react-router';
 
 class ReviewForm extends Component {
   constructor(props) {
@@ -27,6 +27,9 @@ class ReviewForm extends Component {
     const review = this.state;
     this.props.createReview(review)
       .then(() => this.setState({ title: "", body: ""}));
+    // this.props.router.push(`/book/${this.state.book_id}`);
+    //hard reset of the page
+    // window.location.reload(true);
   }
 
 
@@ -53,4 +56,4 @@ class ReviewForm extends Component {
 
 }
 
-export default ReviewForm;
+export default withRouter(ReviewForm);

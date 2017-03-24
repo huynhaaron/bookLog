@@ -5,7 +5,7 @@ import { requestAllBookshelves } from '../../actions/bookshelf_actions';
 import { createShelvedbook,
          deleteShelvedbook } from '../../actions/shelvedbook_actions';
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state, ownProps) => ({
   bookDetail: state.bookDetail,
   bookshelves: state.bookshelves,
   currentShelf: state.currentShelf

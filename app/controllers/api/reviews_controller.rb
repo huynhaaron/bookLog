@@ -9,7 +9,8 @@ class Api::ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.username = current_user.username
     if @review.save
-      render :show
+      @book = @review.book
+      render "api/books/show"
     else
       render json: @review.errors.full_messages, status: 422
     end

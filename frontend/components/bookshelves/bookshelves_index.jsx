@@ -17,12 +17,6 @@ class BookshelvesIndex extends Component {
   }
 
 
-  // componentDidMount() {
-  //   if (this.props.currentUser) {
-  //     this.props.requestAllBookshelves();
-  //   }
-  // }
-
   update(field) {
 		return e => this.setState({[field]: e.currentTarget.value});
 	}
