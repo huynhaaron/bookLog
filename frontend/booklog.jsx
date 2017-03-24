@@ -12,16 +12,16 @@ import { requestShelvedbooks, createShelvedbook } from './actions/shelvedbook_ac
 import { selectAllBooks } from './reducers/selectors';
 
 
-window.signup = signup;
-window.login = login;
-window.logout = logout;
-window.requestAllBooks = requestAllBooks;
-window.selectAllBooks = selectAllBooks;
-window.requestBook = requestBook;
-window.requestAllBookshelves = requestAllBookshelves;
-window.deleteBookshelf = deleteBookshelf;
-window.requestShelvedbooks = requestShelvedbooks;
-window.createShelvedbook = createShelvedbook;
+// window.signup = signup;
+// window.login = login;
+// window.logout = logout;
+// window.requestAllBooks = requestAllBooks;
+// window.selectAllBooks = selectAllBooks;
+// window.requestBook = requestBook;
+// window.requestAllBookshelves = requestAllBookshelves;
+// window.deleteBookshelf = deleteBookshelf;
+// window.requestShelvedbooks = requestShelvedbooks;
+// window.createShelvedbook = createShelvedbook;
 
 
 document.addEventListener('DOMContentLoaded', () => {
