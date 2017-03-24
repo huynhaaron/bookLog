@@ -27,9 +27,6 @@ class ReviewForm extends Component {
     const review = this.state;
     this.props.createReview(review)
       .then(() => this.setState({ title: "", body: ""}));
-    // this.props.router.push(`/book/${this.state.book_id}`);
-    //hard reset of the page
-    // window.location.reload(true);
   }
 
 

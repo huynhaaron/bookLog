@@ -38,26 +38,38 @@ class CreateUser extends React.Component {
 	render() {
 
 		return (
-			<div className="create-user-container">
-				<form onSubmit={this.handleSubmit}>
-					<div className="create-user-form">
-						<p>Not a user? Sign up now!</p>
-							<input type="text"
-								className="create-user-input"
-								value={this.state.username}
-								onChange={this.update("username")}
-                placeholder="Username"/>
-						<br/>
-							<input type="password"
-								className="create-user-input"
-								value={this.state.password}
-								onChange={this.update("password")}
-                placeholder="Password"/>
-						<br/>
-						<input className="create-button" type="submit" value="Join Now" />
+		<div>
+				<div className="create-user-container">
+					<div className="create-user-form" >
+						<p className="create-user-text">
+							Keep a log of your books!
+							<br/>
+
+							Add books to shelves!
+							<br/>
+							Add reviews to books!
+						</p>
+						<form onSubmit={this.handleSubmit}>
+							<div >
+								<p>Not a user? Sign up now!</p>
+									<input type="text"
+										className="create-user-input"
+										value={this.state.username}
+										onChange={this.update("username")}
+		                placeholder="Username"/>
+								<br/>
+									<input type="password"
+										className="create-user-input"
+										value={this.state.password}
+										onChange={this.update("password")}
+		                placeholder="Password"/>
+								<br/>
+								<input className="create-button" type="submit" value="Join Now" />
+								</div>
+						</form>
+						<button className="demo-button" onClick={this.demoSignIn} >Demo</button>
 					</div>
-				</form>
-				<button className="demo-button" onClick={this.demoSignIn} >Demo</button>
+				</div>
 			</div>
 
 		);

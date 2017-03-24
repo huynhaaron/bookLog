@@ -6,17 +6,12 @@ import BooksReducer from './books_reducer';
 import BookDetailReducer from './book_detail_reducer';
 import BookshelvesReducer from './bookshelves_reducer';
 import ShelvedbooksReducer from './shelvedbooks_reducer';
-import CurrentShelfReducer from './current_shelf_reducer';
-import ReviewReducer from './review_reducer';
 
 const appReducer = combineReducers({
   session: SessionReducer,
   books: BooksReducer,
   bookDetail: BookDetailReducer,
-  bookshelves: BookshelvesReducer,
-  currentShelf: CurrentShelfReducer,
-  reviews: ReviewReducer
-
+  bookshelves: BookshelvesReducer
 });
 
 const RootReducer = (state, action) => {

@@ -13,12 +13,6 @@ class BookDetail extends Component {
       this.props.requestBook(this.props.params.bookId);
       this.props.requestAllBookshelves();
   }
-  // 
-  // componentDidUpdate() {
-  //   this.props.requestBook(this.props.params.bookId);
-  // }
-
-
 
   routeIsCorrect() {
     return parseInt(this.props.params.bookId) === this.props.bookDetail.id;

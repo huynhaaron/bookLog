@@ -10,6 +10,7 @@ export const createShelvedbook = (shelvedBook) => (
 export const deleteShelvedbook = (shelvedBook) => (
   $.ajax({
     method: 'DELETE',
-    url: `api/shelvedbook/${shelvedbook.id}`
+    url: `api/shelvedbooks/${shelvedBook.bookshelf_id}`,
+    data: { shelvedBook }
   })
 )

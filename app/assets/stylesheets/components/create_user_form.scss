@@ -1,18 +1,15 @@
 .create-user-container {
 	width: 100%;
-	height: 400px;
+	height: 600px;
 	background-size: cover;
 	background-image: url("https://res.cloudinary.com/booklog/image/upload/v1489616152/pexels-photo-46274_h8i5ok.jpg");
-	margin-bottom: 50px;
 	flex-direction: column;
 }
 
 .create-user-form {
 	margin-top: 100px;
 	margin-right: 50px;
-	display: flex;
 	float: right;
-	align-items: center;
 	flex-direction: column;
 	color: #473020;
 	font-size: 20px;
@@ -63,9 +60,20 @@
 	background-color : #fcba20;
 	margin-top: 10px;
 	margin-right: 20px;
-	float: right;
+	align-items: center;
 }
 
 .demo-button:hover {
 	background-color: #ffd56d;
+}
+
+.create-user-text {
+	margin: auto;
+	display: flex;
+	position: absolute;
+	right: 25%;
+	width: 50%;
+	padding: 10px;
+	font-size: 25px;
+	text-shadow: 1px 1px 1px #AAAAAA;
 }

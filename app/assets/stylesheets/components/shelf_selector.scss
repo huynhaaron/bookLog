@@ -1,8 +1,8 @@
 /* -------------------- Select Box Styles: danielneumann.com Method */
 /* -------------------- Source: http://danielneumann.com/blog/how-to-style-dropdown-with-css-only/ */
-.shelf-selector select {
+.shelf-selector li {
    border: 0;
-   color: #EEE;
+   color: black;
    background: transparent;
    font-size: 18px;
    font-weight: bold;
@@ -11,6 +11,7 @@
    *width: 350px;
    *background: #3D9363;
    -webkit-appearance: none;
+   cursor: pointer; cursor: hand;
 }
 
 .shelf-selector {
@@ -20,7 +21,6 @@
    -moz-border-radius: 9px 9px 9px 9px;
    -webkit-border-radius: 9px 9px 9px 9px;
    border-radius: 9px 9px 9px 9px;
-  //  box-shadow: 1px 1px 11px #AAAAAA;
    box-shadow: 2px 2px 2px #a09f9f;
-   background: #3D9363 url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 319px center;
+   background: #DFDAC7 url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 319px center;
 }

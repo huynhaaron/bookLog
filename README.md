@@ -1,82 +1,40 @@
-# bookLog
+# __bookLog__
 
 [Heroku link][heroku]
 
 [Trello link][trello]
 
-[heroku]: https://stark-ridge-25532.herokuapp.com/
+[heroku]: https://booklog-fsp.herokuapp.com
 [trello]: https://trello.com/b/Pkljgmxa/booklog
 
-## Minimum Viable Product
-
-bookLog is a web application inspired by goodReads built using Ruby on Rails
-and React/Redux.  By the end of Week 9, this app will, at a minimum, satisfy the
-following criteria with smooth, bug-free navigation, adequate seed data and
-sufficient CSS styling:
-
-- [ ] Hosting on Heroku
-- [ ] New account creation, login, and guest/demo login
-- [ ] Production README
-- [ ] Books
-- [ ] Bookshelves
-- [ ] Read Status (will read, have read, etc.)
-- [ ] Reviews
+## Features and Implementations
 
 
-## Design Docs
-* [View Wireframes][wireframes]
-* [React Components][components]
-* [API endpoints][api-endpoints]
-* [DB schema][schema]
-* [Sample State][sample-state]
+#### Shelved books are shown in a grid
 
-[wireframes]: docs/wireframes
-[components]: docs/component-hierarchy.md
-[sample-state]: docs/sample-state.md
-[api-endpoints]: docs/api-endpoints.md
-[schema]: docs/schema.md
+![alt text](https://res.cloudinary.com/booklog/image/upload/v1490388805/Screen_Shot_2017-03-24_at_1.16.56_PM_dfs7xn.png "BooksIndex")
 
-## Implementation Timeline
+Books are stored in a database with all the information. Books have `id`, `author`, `title`, etc columns. Books are added to bookshelves by a table called shelvedbooks, a join table with the fields `booksheld_id` and `book_id`.
 
-### Phase 1: Backend setup and Front End User Authentication (2 days)
+### Book Shelves
 
-**Objective:** Functioning rails project with front-end Authentication
-- Adequate Styling
-- Smooth, bug-free navigation
-- Adequate and appropriate seeds to demonstrate the feature
+![alt text](https://res.cloudinary.com/booklog/image/upload/v1490390255/output_xO4iHf_rnufqi.gif "Shelve deletion")
 
-### Phase 2: Books Model, API, and components (2 days)
-
-**Objective:** Book belong to Bookshelves that can be created, read, edited and destroyed through the API.
-- Adequate Styling
-- Smooth, bug-free navigation
-- Adequate and appropriate seeds to demonstrate the feature
-
-### Phase 3: Bookshelves, API, and components (2 days)
-
-**Objective:** Bookshelves can be created, read, edited and destroyed through
-the API.
-- Adequate Styling
-- Smooth, bug-free navigation
-- Adequate and appropriate seeds to demonstrate the feature
-
-### Phase 4: Read Status (2 days)
-
-**Objective:** Books can have a read status that can be created, read, edited and destroyed through the API.
-- Adequate Styling
-- Smooth, bug-free navigation
-- Adequate and appropriate seeds to demonstrate the feature
-
-### Phase 5: Reviews (2 days)
-
-**Objective:** Books can have reviews that can be created, read, updated, and destroyed through the API.
-- Adequate Styling
-- Smooth, bug-free navigation
-- Adequate and appropriate seeds to demonstrate the feature
+Upon going to the home page, the users bookshelves are loaded onto the left hand column.
 
 
-### Bonus Features (TBD)
-- [ ] Recommended Books (NYTimes/Oprah Book Club)
-- [ ] Infinite Scroll
-- [ ] Tags
-- [ ] Amazon buy book buttons
+#### Ability to add books to shelves
+![alt text](https://res.cloudinary.com/booklog/image/upload/v1490388938/Screen_Shot_2017-03-24_at_1.17.16_PM_cqp0w8.png "AddShelf")
+
+Bookshelves which have their own `id` have an association to the shelved book table. When the book details are fetched, the users shelves which contain the books are fetched as well.
+
+
+
+## Future Direction for the Project
+In addition to the features already implemented, I plan to continue work on this project. The next steps for BookLog are outlined below.
+
+### Add Search
+Ability to search the books in the database or query a API for book information.
+
+### Add Popular Books
+ I plan to implement public shelves for suggested books that displays the current New York Times Best Sellers or Oprah's Book Club.

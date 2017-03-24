@@ -1,5 +1,5 @@
 import * as ShelvedbookAPIUtil from '../util/shelvedbooks_api_util.js';
-
+import { receiveBookshelf } from './bookshelf_actions';
 export const RECEIVE_SHELVEDBOOKS = 'RECEIVE_SHELVEDBOOKS';
 export const RECEIVE_SHELVEDBOOK = 'RECEIVE_SHELVEDBOOK';
 export const REMOVE_SHELVEDBOOK = 'REMOVE_SHELVEDBOOK';
@@ -8,12 +8,12 @@ export const REMOVE_SHELVEDBOOK = 'REMOVE_SHELVEDBOOK';
 
 export const createShelvedbook = (shelvedbook) => dispatch => (
   ShelvedbookAPIUtil.createShelvedbook(shelvedbook)
-    .then(()=> dispatch(receiveShelvedbooks()))
+    .then((bookshelf)=> dispatch(receiveBookshelf(bookshelf)))
 );
 
 export const deleteShelvedbook = (shelvedbook) => dispatch => (
-  ShelvedAPIUtil.deleteShelvedbook(shelvedbook)
-    .then(shelvedbook => dispatch(removeShelvedbook(shelvedbook)))
+  ShelvedbookAPIUtil.deleteShelvedbook(shelvedbook)
+    .then((bookshelf) => dispatch(receiveBookshelf(bookshelf)))
 );
 
 
