@@ -34,8 +34,8 @@ export const requestReviews = (bookId) => dispatch => (
     .then(res => dispatch(receiveReviews(res)))
 );
 
-export const createReview = (bookId, review) => dispatch => (
-  ReviewAPIUtil.createReview(bookId, review)
+export const createReview = (review) => dispatch => (
+  ReviewAPIUtil.createReview(review)
   .then(res => dispatch(receiveReview(res)))
-  .fail(err => dispatch(receiveReviewErrors(err.responseJSON)))
+  // .fail(err => dispatch(receiveReviewErrors(err.responseJSON)))
 );

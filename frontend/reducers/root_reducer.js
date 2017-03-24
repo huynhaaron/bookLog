@@ -14,8 +14,8 @@ const appReducer = combineReducers({
   books: BooksReducer,
   bookDetail: BookDetailReducer,
   bookshelves: BookshelvesReducer,
-  currentShelf: CurrentShelfReducer
-  // reviews: ReviewReducer
+  currentShelf: CurrentShelfReducer,
+  reviews: ReviewReducer
 
 });
 

@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import AddToShelfContainer from './add_to_shelf_container';
+import ReviewFormContainer from './review_form_container';
 
 class BookDetail extends Component {
 
   constructor(props){
     super(props);
   }
+  
   componentDidMount() {
     this.props.requestBook(this.props.params.bookId);
     this.props.requestAllBookshelves();
+    this.props.requestReviews(this.props.params.bookId);
   }
-
-  // componentWillReceiveProps(nextProps) {
-  //   if (this.props.params.bookId !== nextProps.params.bookId) {
-  //     this.props.requestBook(nextProps.params.bookId);
-  //  }
-  // }
 
   routeIsCorrect() {
     return parseInt(this.props.params.bookId) === this.props.bookDetail.id;
@@ -24,20 +21,29 @@ class BookDetail extends Component {
 
   createShelvedbook(e) {
 		e.preventDefault();
-    console.log(e.currentTarget.value);
 		const shelvedbook = this.state;
-		// this.props.createShelvedbook(shelvedbook);
+		this.props.createShelvedbook(shelvedbook);
   }
 
   render() {
+    const { reviews, bookDetail, bookshelves, currentUser, children } = this.props;
 
-    const { bookDetail, bookshelves, currentUser, children } = this.props;
 
-    let user_bookshelves = Object.keys(bookshelves).map((id) => bookshelves[id]);
+    let all_reviews = [];
+    if (reviews) {
+      let book_reviews = Object.keys(reviews).map((id) => reviews[id]);
+        book_reviews.forEach ((review, idx) => {
+          let single_review =
+            <div className="review-item" key={idx} >
+              <p className="review-title">{review.title}</p>
+              <p className="review-author">posted by: {review.username}</p>
+              <br />
+              {review.body}
+            </div>;
+          all_reviews.push(single_review)
+      });
+    };
 
-    let list_of_user_bookshelves = user_bookshelves.map((bookshelf, idx) => {
-      return <li onClick={this.createShelvedbook} key={idx}>{bookshelf.name}</li>
-    })
 
     if (currentUser) {
       return (
@@ -64,13 +70,24 @@ class BookDetail extends Component {
               <li>{bookDetail.author ? `author:  ${bookDetail.author}` : ""}</li>
               <li>{bookDetail.pages ? `pages:  ${bookDetail.pages}` : ""}</li>
               <li>{bookDetail.avg_rating ? `avg rating:  ${bookDetail.avg_rating}` : ""}</li>
-              <li>{bookDetail.isbn ? `isbn:  ${bookDetail.isbn}` : ""}</li>
+              {/* <li>{bookDetail.isbn ? `isbn:  ${bookDetail.isbn}` : ""}</li> */}
             <br />
               <li>{bookDetail.description ? `description:  ${bookDetail.description}` : ""}</li>
             </ul>
-            {children}
 
+            {children}
           </section>
+
+          <div>
+            <section className="review-list-container">
+              <p className="review-header">Reviews</p>
+              {all_reviews}
+            </section>
+
+            <section>
+              <ReviewFormContainer />
+            </section>
+          </div>
 
 
         </div>

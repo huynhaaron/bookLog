@@ -5,13 +5,13 @@
                   :isbn, :language, :buy_url
     json.cover_url asset_path(book.cover_url)
 
-    json.reviews do
-      book.reviews.each do |review|
-        json.set! review.id do
-          json.extract! review, :title, :body, :rating, :user_id,
-                        :username, :created_at
-        end
-      end
-    end
+    # json.reviews do
+    #   book.reviews.each do |review|
+    #     json.set! review.id do
+    #       json.extract! review, :title, :body, :rating, :user_id,
+    #                     :username, :created_at
+    #     end
+    #   end
+    # end
   end
-end
+end 

@@ -1,15 +1,13 @@
 class Api::ReviewsController < ApplicationController
 
   def index
-    @reviews = Review.where(book_id: params[:book_id]).order(created_at: :desc)
+    @reviews = Review.where(book_id: params[:book_id]).order(created_at: :asc)
   end
 
 
   def create
     @review = Review.new(review_params)
-    @review.user_id = current_user.id
     @review.username = current_user.username
-    @review.book_id = params[:book_id]
     if @review.save
       render :show
     else

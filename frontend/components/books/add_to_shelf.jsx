@@ -4,7 +4,7 @@ class AddToShelf extends Component {
 
   constructor(props){
     super(props);
-    this.state = {bookshelf_id: null, book_id: null};
+    this.state = {bookshelf_id: 0, book_id: 0};
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -22,6 +22,7 @@ class AddToShelf extends Component {
 
   render() {
     const { bookDetail, bookshelves, currentShelf } = this.props;
+
     let user_bookshelves = Object.keys(bookshelves).map((id) => bookshelves[id]);
 
     let list_of_user_bookshelves = user_bookshelves.map((bookshelf, idx) => {
@@ -36,7 +37,7 @@ class AddToShelf extends Component {
     return (
       <div className="shelf-selector">
           <select value={this.state.bookshelf_id} onChange={this.handleChange} >
-            <option value="" disabled selected hidden>Shelve this book!</option>
+            <option disabled defaultValue hidden>Shelve this book!</option>
             {list_of_user_bookshelves}
           </select>
       </div>
