@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ShelfListItem from './shelf_list_item';
+import { Link, withRouter } from 'react-router';
 
 class AddToShelf extends Component {
 
@@ -27,6 +27,7 @@ class AddToShelf extends Component {
     this.setState({bookshelf_id: e.target.value}, () => {
       this.props.deleteShelvedbook(this.state);
     })
+    this.props.router.push('/');
   }
 
 
@@ -64,4 +65,4 @@ class AddToShelf extends Component {
 
 }
 
-export default AddToShelf;
+export default withRouter(AddToShelf);
