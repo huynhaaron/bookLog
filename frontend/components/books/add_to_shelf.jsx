@@ -6,7 +6,6 @@ class AddToShelf extends Component {
   constructor(props){
     super(props);
     this.state = {bookshelf_id: 0, book_id: 0};
-    // this.handleClick = this.handleClick.bind(this);
     this.handleAdd = this.handleAdd.bind(this);
     this.handleRemove = this.handleRemove.bind(this);
 
@@ -29,15 +28,6 @@ class AddToShelf extends Component {
       this.props.deleteShelvedbook(this.state);
     })
   }
-  //
-  // handleClick(e) {
-  //   console.log("in handle click");
-  //   e.stopPropagation();
-  //   this.setState({bookshelf_id: e.target.value}, () => {
-  //     // let shelvedbook = ({bookshelf_id: state.bookshelf_id, book_id: state.book_id })
-  //     this.shelfAction(this.state);
-  //   });
-  // }
 
 
   render() {
