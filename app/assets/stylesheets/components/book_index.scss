@@ -1,5 +1,12 @@
+.home {
+  display: flex;
+  justify-content: center;
+}
+
 .book_index_show_all {
   display: flex;
+  justify-content: center;
+  max-width: 800px;
   flex-wrap: wrap;
 }
 
