@@ -2,16 +2,18 @@
   display: flex;
   justify-content: center;
 }
-
+.books_index_container {
+//
+}
 .book_index_show_all {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   max-width: 800px;
+  object-fit: contain;
   flex-wrap: wrap;
 }
 
 .book_index_cover_image {
-  display: inline-block;
   position: relative;
   float: left;
   margin-left: 50px;

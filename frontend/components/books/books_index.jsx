@@ -29,8 +29,8 @@ class BooksIndex extends Component {
 
     if (currentUser) {
       return (
-        <div>
-          <SearchInput className="search-input" placeholder="Search for a book" onChange={this.searchUpdated} />
+        <div className="books_index_container">
+          <SearchInput className="search-input" placeholder="🔍 Search for a book" onChange={this.searchUpdated} />
           <div className="book_index_show_all">
             {filteredBooks.map(book => <BookIndexItem key={book.id} book={book} />)}
             { children }

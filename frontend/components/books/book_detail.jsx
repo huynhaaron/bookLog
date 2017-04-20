@@ -77,7 +77,7 @@ class BookDetail extends Component {
             {children}
           </section>
 
-          <div>
+          <div className="review_container">
             <section className="review-list-container">
               <p className="review-header">Reviews</p>
               {all_reviews}
