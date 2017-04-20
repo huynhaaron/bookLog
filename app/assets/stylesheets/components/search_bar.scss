@@ -1,16 +1,26 @@
 
 .search-input {
-  justify-content: left;
+  justify-content: center;
   margin-top: 20px;
-  margin-left: 50%;
+  margin-left: 10%;
   background-color: white;
-  max-width: 170px;
-  border: 2px solid #dadada;
+  border: 5px solid #dadada;
   border-radius: 7px;
+}
+
+.search-input > input {
+  width: 95%;
+  font-size: 18px;
+  border: none;
+  line-height: 22px;
+  padding: 5px 10px 5px 25px;
+  height: 32px;
+  background-color: white;
+  position: relative;
 }
 
 .search-input > input:focus {
   outline: blue;
   border-color: #9ecaed;
-  box-shadow: 0 0 10px #9ecaed;
+  box-shadow: 0 0 15px #9ecaed;
 }
