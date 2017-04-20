@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import BookshelfDetail from './bookshelf_detail';
-import {  requestBookshelf } from '../../actions/bookshelf_actions';
+import { requestBookshelf } from '../../actions/bookshelf_actions';
 
 
 const mapStateToProps = (state,ownProps) => ({
