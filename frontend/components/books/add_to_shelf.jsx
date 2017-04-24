@@ -25,9 +25,9 @@ class AddToShelf extends Component {
 
   handleRemove(e) {
     this.setState({bookshelf_id: e.target.value}, () => {
-      this.props.deleteShelvedbook(this.state);
+      this.props.deleteShelvedbook(this.state)
+        .then(this.props.requestAllBookshelves());
     })
-    this.props.router.push('/');
   }
 
 

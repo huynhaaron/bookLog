@@ -26,7 +26,8 @@ class Api::BookshelvesController < ApplicationController
 
   def destroy
     @bookshelf = Bookshelf.find(params[:id]).destroy
-    render json: { id: params[:id] }, status: 200
+    # render json: { id: params[:id] }, status: 200
+    render json: @bookshelf
   end
 
   private
