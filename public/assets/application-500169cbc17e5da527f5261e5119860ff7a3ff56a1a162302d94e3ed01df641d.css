@@ -1,0 +1,552 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+ */
+/* line 2, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/base/reset.scss */
+html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+  background-color: transparent;
+  font-family: 'lato', sans-serif;
+}
+
+/* line 22, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/base/reset.scss */
+ul {
+  list-style: none;
+}
+
+/* line 25, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/base/reset.scss */
+body {
+  background-color: #F9F8F4;
+}
+
+/* line 28, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/base/reset.scss */
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* line 34, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/base/reset.scss */
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* line 45, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/base/reset.scss */
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+/* Clearfix */
+/* line 54, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/base/reset.scss */
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* line 1, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/base/layout.scss */
+.home-container {
+  display: flex;
+  flex-direction: rows;
+  background-color: #F9F8F4;
+}
+
+/* line 3, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/book_detail.scss */
+.book-detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+/* line 10, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/book_detail.scss */
+.book-detail-image {
+  width: 200px;
+  box-shadow: 8px 8px 8px #a09f9f;
+  filter: contrast(107%);
+}
+
+/* line 17, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/book_detail.scss */
+.book-detail-header {
+  position: relative;
+  color: #AAAAAA;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* line 24, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/book_detail.scss */
+.book-detail-information {
+  width: 500px;
+}
+
+/* line 28, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/book_detail.scss */
+.book-title {
+  font-size: 25px;
+}
+
+/* line 32, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/book_detail.scss */
+.no-books-message {
+  position: fixed;
+  /* or absolute */
+  top: 20%;
+  left: 23%;
+  font-size: 30px;
+}
+
+/* line 1, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/book_index.scss */
+.home {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 8, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/book_index.scss */
+.book_index_show_all {
+  display: flex;
+  justify-content: left;
+  max-width: 800px;
+  object-fit: contain;
+  flex-wrap: wrap;
+}
+
+/* line 16, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/book_index.scss */
+.book_index_cover_image {
+  position: relative;
+  float: left;
+  margin-left: 50px;
+  margin-top: 40px;
+  object-fit: cover;
+  width: 120px;
+  height: 192px;
+  box-shadow: 8px 8px 8px #a09f9f;
+  filter: contrast(107%);
+}
+
+/* line 1, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/bookshelves_list.scss */
+.bookshelves-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+  margin-top: 10px;
+  min-height: 100%;
+  width: 140px;
+  position: relative;
+}
+
+/* line 11, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/bookshelves_list.scss */
+.bookshelves-header {
+  color: #AAAAAA;
+  font-size: 20px;
+}
+
+/* line 16, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/bookshelves_list.scss */
+.bookshelves-detail-header {
+  color: #00635D;
+  font-size: 20px;
+  position: absolute;
+  margin-top: 5px;
+}
+
+/* line 23, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/bookshelves_list.scss */
+.shelf-text-input {
+  border: 1px solid black;
+  width: 100px;
+  margin: 3px;
+  border-radius: 5%;
+  background-color: white;
+}
+
+/* line 31, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/bookshelves_list.scss */
+.shelf-add-button {
+  border: 1px solid black;
+  border-radius: 10%;
+  background-color: #d6d4d5;
+  padding: 2px;
+}
+
+/* line 38, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/bookshelves_list.scss */
+.shelf-text {
+  color: #00635D;
+}
+
+/* line 42, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/bookshelves_list.scss */
+.shelf-text:hover {
+  text-decoration: underline;
+}
+
+/* line 1, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/create_user_form.scss */
+.create-user-container {
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-image: url("https://res.cloudinary.com/booklog/image/upload/v1489616152/pexels-photo-46274_h8i5ok.jpg");
+  flex-direction: column;
+}
+
+/* line 9, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/create_user_form.scss */
+.create-user-form {
+  margin-top: 100px;
+  margin-right: 50px;
+  float: right;
+  flex-direction: column;
+  color: #473020;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* line 20, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/create_user_form.scss */
+.create-user-input {
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+  radius: 5%;
+  margin-top: 3px;
+  font-size: 15px;
+  background: white;
+}
+
+/* line 30, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/create_user_form.scss */
+.create-user-input:focus {
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+  radius: 5%;
+}
+
+/* line 37, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/create_user_form.scss */
+.create-button {
+  border: solid 0px #000000;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 4px 17px;
+  background-color: #fcba20;
+  margin-top: 10px;
+  margin-right: 20px;
+  flex-direction: row;
+}
+
+/* line 49, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/create_user_form.scss */
+.create-button:hover {
+  background-color: #ffd56d;
+}
+
+/* line 54, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/create_user_form.scss */
+.demo-button {
+  border: solid 0px #000000;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 4px 17px;
+  background-color: #fcba20;
+  margin-top: 10px;
+  margin-right: 20px;
+  align-items: center;
+}
+
+/* line 66, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/create_user_form.scss */
+.demo-button:hover {
+  background-color: #ffd56d;
+}
+
+/* line 70, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/create_user_form.scss */
+.create-user-text {
+  margin: auto;
+  display: flex;
+  position: absolute;
+  right: 25%;
+  width: 50%;
+  padding: 10px;
+  font-size: 25px;
+  text-shadow: 1px 1px 1px #AAAAAA;
+}
+
+/* line 2, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/error_list.scss */
+.alert {
+  padding: 10px;
+  color: black;
+  margin-bottom: 15px;
+  align-items: center;
+  float: right;
+  z-index: 1;
+  margin-right: 20px;
+  position: absolute;
+  right: 50px;
+  top: 100px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  bottom-margin: 10px;
+}
+
+/* line 19, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/error_list.scss */
+.alert-text {
+  color: white;
+}
+
+/* line 1, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/login_form.scss */
+.login-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  clear: both;
+  width: 100%;
+  justify-content: space-between;
+  height: 70px;
+  background-color: #DFDAC7;
+  box-shadow: 0px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* line 14, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/login_form.scss */
+.logo {
+  display: flex;
+  float: left;
+  margin-left: 30px;
+  margin-right: 30px;
+  align-items: center;
+  font-size: 20px;
+}
+
+/* line 23, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/login_form.scss */
+.login-form-right {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+/* line 29, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/login_form.scss */
+.login-form {
+  font-size: 20px;
+  font-weight: bold;
+  color: #473020;
+}
+
+/* line 35, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/login_form.scss */
+.form-input {
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+  radius: 5%;
+  padding-right: 15px;
+  margin-right: 15px;
+  font-size: 13px;
+  background: white;
+}
+
+/* line 46, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/login_form.scss */
+.form-input:focus {
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+  radius: 5%;
+}
+
+/* line 52, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/login_form.scss */
+.login-button {
+  border: solid 0px #000000;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 4px 17px;
+  background-color: #101112;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+/* line 63, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/login_form.scss */
+.login-button:hover {
+  background-color: #683F19;
+}
+
+/* line 68, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/login_form.scss */
+.home-button {
+  margin-left: 15px;
+}
+
+/* line 72, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/login_form.scss */
+.main-logo-text {
+  margin-left: 10px;
+}
+
+/* line 1, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/review_form.scss */
+.review_container {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 6, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/review_form.scss */
+.review-form-container {
+  max-width: 400px;
+  height: 400px;
+  float: left;
+}
+
+/* line 12, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/review_form.scss */
+.review-form-titleinput {
+  border: 1px solid black;
+  background-color: white;
+  font-size: 20px;
+  margin: 10px;
+  padding: 2px;
+  border: 2px solid gray;
+  border-radius: 4px;
+}
+
+/* line 22, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/review_form.scss */
+.review-form-textarea {
+  margin: 10px;
+  border: 1px solid black;
+  background-color: white;
+  resize: none;
+  width: 400px;
+  height: 150px;
+  border: 2px solid gray;
+  border-radius: 4px;
+}
+
+/* line 33, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/review_form.scss */
+.review-form-submit-button {
+  border: solid 0px #000000;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 4px 17px;
+  background-color: #fcba20;
+  margin-left: 20px;
+  margin-bottom: 50px;
+}
+
+/* line 44, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/review_form.scss */
+.review-header {
+  color: #00635D;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+/* line 1, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/review_item.scss */
+.review-sub-section {
+  display: flex;
+}
+
+/* line 6, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/review_item.scss */
+.review-list-container {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  max-width: 400px;
+  margin-right: 10%;
+}
+
+/* line 13, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/review_item.scss */
+.review-item {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 5px;
+  margin: 10px;
+  radius: 5%;
+  background: white;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+/* line 25, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/review_item.scss */
+.review-title {
+  color: #00635D;
+  font-size: 16px;
+}
+
+/* line 30, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/review_item.scss */
+.review-author {
+  color: #AAAAAA;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+/* line 2, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/search_bar.scss */
+.search-input {
+  justify-content: left;
+  margin-top: 20px;
+  margin-left: 5%;
+  background-color: white;
+  border: 5px solid #dadada;
+  border-radius: 7px;
+}
+
+/* line 11, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/search_bar.scss */
+.search-input > input {
+  width: 95%;
+  font-size: 18px;
+  border: none;
+  line-height: 22px;
+  padding: 5px 10px 5px 25px;
+  height: 32px;
+  background-color: white;
+  position: relative;
+}
+
+/* line 22, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/search_bar.scss */
+.search-input > input:focus {
+  outline: blue;
+  border-color: #9ecaed;
+  box-shadow: 0 0 15px #9ecaed;
+}
+
+/* -------------------- Select Box Styles: danielneumann.com Method */
+/* -------------------- Source: http://danielneumann.com/blog/how-to-style-dropdown-with-css-only/ */
+/* line 3, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/shelf_selector.scss */
+.shelf-selector li {
+  border: 0;
+  color: black;
+  background: transparent;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 2px 10px;
+  width: 215px;
+  *width: 350px;
+  *background: #3D9363;
+  -webkit-appearance: none;
+  cursor: pointer;
+  cursor: hand;
+}
+
+/* line 17, /Users/aaronhuynh/Desktop/booklog/app/assets/stylesheets/components/shelf_selector.scss */
+.shelf-selector {
+  margin-top: 30px;
+  overflow: hidden;
+  width: 200px;
+  -moz-border-radius: 9px 9px 9px 9px;
+  -webkit-border-radius: 9px 9px 9px 9px;
+  border-radius: 9px 9px 9px 9px;
+  box-shadow: 2px 2px 2px #a09f9f;
+  background: #DFDAC7;
+}
