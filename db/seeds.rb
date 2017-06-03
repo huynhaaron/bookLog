@@ -333,6 +333,21 @@ And strike it does. For in Harry's second year at Hogwarts, fresh torments and h
             isbn: "043906486",
             language: "en")
 
+Book.create!(title: "The Martian",
+            author: "Andy Weird",
+            description: "A mission to Mars. A freak accident. One man's struggle to survive. Six days ago, astronaut Mark Watney became one of the first people to walk on Mars.
+                          Now, he's sure he'll be the first person to die there. After a dust storm nearly kills him and forces his crew to evacuate the planet while thinking him dead, Mark finds himself stranded on Mars' surface, completely alone, with no way to signal Earth that he’s alive. And even if he could get word out, his supplies would be gone years before a rescue could arrive. Chances are, though, Mark won't have time to starve to death. The damaged machinery, unforgiving environment or plain-old human error are much more likely to kill him first.
+                          But Mark's not ready to quit. Armed with nothing but his ingenuity and his engineering skills—and a gallows sense of humor that proves to be his greatest source of strength–he embarks on a dogged quest to stay alive, using his botany expertise to grow food and even hatching a mad plan to contact NASA back on Earth.
+                          As he overcomes one seemingly insurmountable obstacle after the next, Mark begins to let himself believe he might make it off the planet alive.
+                          But Mars has plenty of surprises in store for him yet.",
+            cover_url: "https://images.gr-assets.com/books/1413706054l/18007564.jpg",
+            avg_rating: 4.39,
+            pages: 341,
+            publish_date: "2014-02-11",
+            publisher: "Crown",
+            isbn: "0804139024",
+            language: "en")
+
 
 
 Bookshelf.create!(user_id: 1, name: "sci-fi")
