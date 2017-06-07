@@ -349,6 +349,20 @@ Book.create!(title: "The Martian",
             language: "en")
 
 
+Book.create!(title: "The Tao of Pooh",
+            author: "Benjamin Hoff",
+            description: "The Wisdom of Pooh.
+                          Is there such thing as a Western Taoist? Benjamin Hoff says there is, and this Taoist's favorite food is honey. Through brilliant and witty dialogue with the beloved Pooh-bear and his companions, the author of this smash bestseller explains with ease and aplomb that rather than being a distant and mysterious concept, Taoism is as near and practical to us as our morning breakfast bowl.
+                          Romp through the enchanting world of Winnie-the-Pooh while soaking up invaluable lessons on simplicity and natural living.",
+            cover_url: "https://images.gr-assets.com/books/1348137748l/48757.jpg",
+            avg_rating: 4.39,
+            pages: 341,
+            publish_date: "2003-02-06",
+            publisher: "Egmont Books",
+            isbn: "1405204265",
+            language: "en")
+
+
 
 Bookshelf.create!(user_id: 1, name: "sci-fi")
 Bookshelf.create!(user_id: 1, name: "classics")
