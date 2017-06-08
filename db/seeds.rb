@@ -362,6 +362,18 @@ Book.create!(title: "The Tao of Pooh",
             isbn: "1405204265",
             language: "en")
 
+Book.create!(title: "Outlier: The Story of Success",
+            author: "Malcolm Gladwell",
+            description: "In this stunning new book, Malcolm Gladwell takes us on an intellectual journey through the world of outliers--the best and the brightest, the most famous and the most successful. He asks the question: what makes high-achievers different?
+His answer is that we pay too much attention to what successful people are like, and too little attention to where they are from: that is, their culture, their family, their generation, and the idiosyncratic experiences of their upbringing. Along the way he explains the secrets of software billionaires, what it takes to be a great soccer player, why Asians are good at math, and what made the Beatles the greatest rock band",
+            cover_url: "https://images.gr-assets.com/books/1344266315l/3228917.jpg",
+            avg_rating: 4.1,
+            pages: 309,
+            publish_date: "2008-11-18",
+            publisher: "Little, Brown and Company",
+            isbn: "0316017922",
+            language: "en")
+
 
 
 Bookshelf.create!(user_id: 1, name: "sci-fi")
