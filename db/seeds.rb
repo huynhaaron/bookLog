@@ -374,6 +374,21 @@ His answer is that we pay too much attention to what successful people are like,
             isbn: "0316017922",
             language: "en")
 
+Book.create!(title: "Truly Madly Guilty",
+            author: "Liane Moriarty",
+            description: "Six responsible adults. Three cute kids. One small dog. It’s just a normal weekend. What could possibly go wrong?
+                          Sam and Clementine have a wonderful, albeit, busy life: they have two little girls, Sam has just started a new dream job, and Clementine, a cellist, is busy preparing for the audition of a lifetime. If there’s anything they can count on, it’s each other.
+                          Clementine and Erika are each other’s oldest friends. A single look between them can convey an entire conversation. But theirs is a complicated relationship, so when Erika mentions a last minute invitation to a barbecue with her neighbors, Tiffany and Vid, Clementine and Sam don’t hesitate. Having Tiffany and Vid’s larger than life personalities there will be a welcome respite.
+                          Two months later, it won’t stop raining, and Clementine and Sam can’t stop asking themselves the question: What if we hadn’t gone?
+                          In Truly Madly Guilty, Liane Moriarty takes on the foundations of our lives: marriage, sex, parenthood, and friendship. She shows how guilt can expose the fault lines in the most seemingly strong relationships, how what we don’t say can be more powerful than what we do, and how sometimes it is the most innocent of moments that can do the greatest harm. ",
+            cover_url: "https://images.gr-assets.com/books/1491249206l/26247008.jpg",
+            avg_rating: 3.54,
+            pages: 415,
+            publish_date: "2016-07-26",
+            publisher: "Flatiron Books",
+            isbn: "1250069793",
+            language: "en")
+
 
 
 Bookshelf.create!(user_id: 1, name: "sci-fi")
