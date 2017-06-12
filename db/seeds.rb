@@ -400,6 +400,17 @@ Book.create!(title: "Harry Potter and the Cursed Child - Parts One and Two",
             isbn: "0751565350",
             language: "en")
 
+Book.create!(title: "The Outsiders",
+            author: "S.E. Hinton",
+            description: "According to Ponyboy, there are two kinds of people in the world: greasers and socs. A soc (short for social) has money, can get away with just about anything, and has an attitude longer than a limousine. A greaser, on the other hand, always lives on the outside and needs to watch his back. Ponyboy is a greaser, and he's always been proud of it, even willing to rumble against a gang of socs for the sake of his fellow greasers--until one terrible night when his friend Johnny kills a soc. The murder gets under Ponyboy's skin, causing his bifurcated world to crumble and teaching him that pain feels the same whether a soc or a greaser.",
+            cover_url: "https://images.gr-assets.com/books/1442129426l/231804.jpg",
+            avg_rating: 406,
+            pages: 192,
+            publish_date: "1988-09-01",
+            publisher: "Speak",
+            isbn: "014038572X",
+            language: "en")
+
 
 
 Bookshelf.create!(user_id: 1, name: "sci-fi")
