@@ -422,6 +422,19 @@ Book.create!(title: "Tuck Everlasting",
             isbn: "0374480095",
             language: "en")
 
+Book.create!(title: "Astrophysics for People in a Hurry",
+            author: "Neil deGrasse Tyson",
+            description: "What is the nature of space and time? How do we fit within the universe? How does the universe fit within us? There’s no better guide through these mind-expanding questions than acclaimed astrophysicist and best-selling author Neil deGrasse Tyson.
+                          But today, few of us have time to contemplate the cosmos. So Tyson brings the universe down to Earth succinctly and clearly, with sparkling wit, in tasty chapters consumable anytime and anywhere in your busy day.
+                          While you wait for your morning coffee to brew, for the bus, the train, or a plane to arrive, Astrophysics for People in a Hurry will reveal just what you need to be fluent and ready for the next cosmic headlines: from the Big Bang to black holes, from quarks to quantum mechanics, and from the search for planets to the search for life in the universe.",
+            cover_url: "https://images.gr-assets.com/books/1479535337l/32191710.jpg",
+            avg_rating: 4.23,
+            pages: 222,
+            publish_date: "2017-05-02",
+            publisher: "W. W. Norton & Company",
+            isbn: "0393609391",
+            language: "en")
+
 
 
 Bookshelf.create!(user_id: 1, name: "sci-fi")
