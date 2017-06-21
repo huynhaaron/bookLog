@@ -436,6 +436,24 @@ Book.create!(title: "Astrophysics for People in a Hurry",
             language: "en")
 
 
+Book.create!(title: "Two Roads from Here",
+            author: "Teddy Steinkellner",
+            description: "Five high school seniors. Two different roads. One life-changing decision. For fans of Tommy Wallach and Patrick Ness comes a thoughtful, funny novel that explores what happens to five teens when they choose the road…and the road not taken.
+                          Should Brian play in Friday’s football game, even though his head really hurts?
+                          Should Allegra commit to college now that her mother’s illness has returned?
+                          Should Cole cheat on the SATs for a chance to get into his dream school?
+                          Should Nikki go all the way with her boyfriend?
+                          Should Wiley tell his best friend that he loves her and risk losing her completely?
+                          These five seniors are about to have an opportunity people only dream about: to experience two potential outcomes of a life-altering decision. When it’s all over, will they still recognize their futures?",
+            cover_url: "https://images.gr-assets.com/books/1483649834l/21945597.jpg",
+            avg_rating: 4.5,
+            pages: 448,
+            publish_date: "2017-08-01",
+            publisher: "Simon & Schuster ",
+            isbn: "B01M0ZSHT9",
+            language: "en")
+
+
 
 Bookshelf.create!(user_id: 1, name: "sci-fi")
 Bookshelf.create!(user_id: 1, name: "classics")
