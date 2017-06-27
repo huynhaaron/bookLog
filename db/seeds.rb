@@ -454,6 +454,18 @@ Book.create!(title: "Two Roads from Here",
             language: "en")
 
 
+Book.create!(title: "Understanding Exposure",
+            author: "Bryan Peterson",
+            description: "With his trademark accessible style, Peterson instructs readers on how to achieve successful images in almost any situation, explaining the fundamentals of exposure and its component parts of light, aperture, and shutter speed. With an emphasis on getting the best exposure even in tricky situations, Understanding Exposure shows how to get (or lose) sharpness and contrast in images, how to freeze action, and how to take the best meter readings, while also exploring filters, flash, and light. With all new images, and updated captions throughout, this revised edition is sure to be as popular as ever.",
+            cover_url: "https://images.gr-assets.com/books/1442832248l/25852929.jpg",
+            avg_rating: 4.31,
+            pages: 168,
+            publish_date: "2016-03-15",
+            publisher: "SAmphoto Books",
+            isbn: "1607748509",
+            language: "en")
+
+
 
 Bookshelf.create!(user_id: 1, name: "sci-fi")
 Bookshelf.create!(user_id: 1, name: "classics")
