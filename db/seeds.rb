@@ -461,7 +461,7 @@ Book.create!(title: "Understanding Exposure",
             avg_rating: 4.31,
             pages: 168,
             publish_date: "2016-03-15",
-            publisher: "SAmphoto Books",
+            publisher: "Samphoto Books",
             isbn: "1607748509",
             language: "en")
 
