@@ -465,6 +465,17 @@ Book.create!(title: "Understanding Exposure",
             isbn: "1607748509",
             language: "en")
 
+Book.create!(title: "The Girl with the Dragon Tattoo",
+          author: "Steig Larsson",
+          description: "Mikael Blomkvist, a once-respected financial journalist, watches his professional life rapidly crumble around him. Prospects appear bleak until an unexpected (and unsettling) offer to resurrect his name is extended by an old-school titan of Swedish industry. The catch—and there's always a catch—is that Blomkvist must first spend a year researching a mysterious disappearance that has remained unsolved for nearly four decades. With few other options, he accepts and enlists the help of investigator Lisbeth Salander, a misunderstood genius with a cache of authority issues. Little is as it seems in Larsson's novel, but there is at least one constant: you really don't want to mess with the girl with the dragon tattoo.",
+          cover_url: "https://images.gr-assets.com/books/1327868566l/2429135.jpg",
+          avg_rating: 4.11,
+          pages: 465,
+          publish_date: "2008-09-16",
+          publisher: "Knopf",
+          isbn: "0307269752",
+          language: "en")
+
 
 
 Bookshelf.create!(user_id: 1, name: "sci-fi")
