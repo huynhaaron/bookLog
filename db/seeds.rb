@@ -487,6 +487,18 @@ Book.create!(title: "Harry Potter and the Prisoner of Azkaban",
           isbn: "043965548X",
           language: "en")
 
+Book.create!(title: "Harry Potter and the Goblet of Fire",
+          author: "J.K. Rowling",
+          description: "Harry Potter is midway through both his training as a wizard and his coming of age. Harry wants to get away from the pernicious Dursleys and go to the International Quidditch Cup with Hermione, Ron, and the Weasleys. He wants to dream about Cho Chang, his crush (and maybe do more than dream). He wants to find out about the mysterious event that supposed to take place at Hogwarts this year, an event involving two other rival schools of magic, and a competition that hasn't happened for hundreds of years. He wants to be a normal, fourteen-year-old wizard. But unfortunately for Harry Potter, he's not normal - even by wizarding standards.
+          And in his case, different can be deadly.",
+          cover_url: "https://images.gr-assets.com/books/1361482611l/6.jpg",
+          avg_rating: 4.52,
+          pages: 734,
+          publish_date: "2002-09-28",
+          publisher: "Scholastic",
+          isbn: "0439139600",
+          language: "en")
+
 
 
 Bookshelf.create!(user_id: 1, name: "sci-fi")
